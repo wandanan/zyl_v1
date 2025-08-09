@@ -1,0 +1,557 @@
+{
+  "stories": [
+    {
+      "story_id": "story_001",
+      "title": "乡村医生的坚守",
+      "content": [
+        "李明是一名年轻的医生，从医学院毕业后，他放弃了城市大医院的高薪工作，选择回到自己的家乡——一个偏远的小山村当村医。",
+        "这个村子位于大山深处，交通不便，医疗条件落后。村里只有一个小诊所，设备简陋，药品也不齐全。",
+        "李明的父母和乡亲们都劝他留在城市，但他坚持自己的选择。他说：'这里是我的家乡，这里的乡亲们需要我。'",
+        "张大爷是村里的老人，患有严重的心脏病。一天深夜，张大爷突然发病，情况危急。",
+        "李明接到电话后，立即骑摩托车赶到张大爷家。他凭借自己的医术，稳定了张大爷的病情，并连夜护送他到县医院。",
+        "经过这次事件，李明在村里的威望更高了。他不仅治病救人，还经常为村民普及健康知识。",
+        "一年后，李明被评为'最美乡村医生'，他的事迹被媒体报道，感动了很多人。",
+        "这个故事告诉我们，真正的价值不在于金钱和地位，而在于能够帮助他人，为社会做出贡献。"
+      ],
+      "questions": [
+        {
+          "question_id": "q001_01",
+          "question": "李明是什么职业？",
+          "expected_fragments": [0],
+          "answer": "李明是一名医生",
+          "difficulty": "easy",
+          "type": "factual"
+        },
+        {
+          "question_id": "q001_02",
+          "question": "村子里的医疗条件怎么样？",
+          "expected_fragments": [1],
+          "answer": "村子里的医疗条件落后，只有一个小诊所，设备简陋，药品也不齐全",
+          "difficulty": "easy",
+          "type": "factual"
+        },
+        {
+          "question_id": "q001_03",
+          "question": "张大爷得了什么病？",
+          "expected_fragments": [3],
+          "answer": "张大爷患有严重的心脏病",
+          "difficulty": "easy",
+          "type": "factual"
+        },
+        {
+          "question_id": "q001_04",
+          "question": "为什么李明要回到家乡当医生？",
+          "expected_fragments": [0, 2],
+          "answer": "李明认为这里是他的家乡，这里的乡亲们需要他",
+          "difficulty": "medium",
+          "type": "reasoning"
+        },
+        {
+          "question_id": "q001_05",
+          "question": "李明是如何处理张大爷的紧急情况的？",
+          "expected_fragments": [4],
+          "answer": "李明立即骑摩托车赶到张大爷家，稳定了病情，并连夜护送他到县医院",
+          "difficulty": "medium",
+          "type": "reasoning"
+        },
+        {
+          "question_id": "q001_06",
+          "question": "李明为什么被评为最美乡村医生？",
+          "expected_fragments": [1, 2, 4, 5, 6],
+          "answer": "因为李明放弃城市工作回到家乡，治病救人，普及健康知识，为村民服务",
+          "difficulty": "hard",
+          "type": "reasoning"
+        },
+        {
+          "question_id": "q001_07",
+          "question": "这个故事告诉我们什么道理？",
+          "expected_fragments": [7],
+          "answer": "真正的价值不在于金钱和地位，而在于能够帮助他人，为社会做出贡献",
+          "difficulty": "medium",
+          "type": "summary"
+        }
+      ]
+    },
+    {
+      "story_id": "story_002",
+      "title": "小明的环保行动",
+      "content": [
+        "小明是一名小学五年级的学生，他非常关心环境保护问题。",
+        "有一天，小明在放学回家的路上，看到路边有很多垃圾，塑料袋、饮料瓶随处可见。",
+        "小明决定采取行动。他回到家后，立即制作了一个环保宣传海报，呼吁大家保护环境。",
+        "第二天，小明带着海报来到学校，向同学们宣传环保知识。",
+        "在老师的支持下，小明组织了一个环保小组，定期在校园和社区进行清洁活动。",
+        "他们还制作了环保标语，贴在校园的各个角落，提醒大家不要乱扔垃圾。",
+        "经过几个月的努力，校园和社区的环境明显改善，垃圾减少了，环境更加整洁。",
+        "小明的环保行动得到了学校和社区的表扬，他也被评为'环保小卫士'。",
+        "这个故事告诉我们，每个人都可以为保护环境做出贡献，从小事做起，从自己做起。"
+      ],
+      "questions": [
+        {
+          "question_id": "q002_01",
+          "question": "小明是什么身份？",
+          "expected_fragments": [0],
+          "answer": "小明是一名小学五年级的学生",
+          "difficulty": "easy",
+          "type": "factual"
+        },
+        {
+          "question_id": "q002_02",
+          "question": "小明在路上看到了什么？",
+          "expected_fragments": [1],
+          "answer": "小明看到路边有很多垃圾，塑料袋、饮料瓶随处可见",
+          "difficulty": "easy",
+          "type": "factual"
+        },
+        {
+          "question_id": "q002_03",
+          "question": "小明采取了哪些环保行动？",
+          "expected_fragments": [2, 3, 4, 5],
+          "answer": "制作环保海报、宣传环保知识、组织环保小组、进行清洁活动、制作环保标语",
+          "difficulty": "medium",
+          "type": "reasoning"
+        },
+        {
+          "question_id": "q002_04",
+          "question": "小明的环保行动取得了什么效果？",
+          "expected_fragments": [6, 7],
+          "answer": "校园和社区环境明显改善，垃圾减少，环境更整洁，小明被评为环保小卫士",
+          "difficulty": "medium",
+          "type": "reasoning"
+        },
+        {
+          "question_id": "q002_05",
+          "question": "这个故事告诉我们什么道理？",
+          "expected_fragments": [8],
+          "answer": "每个人都可以为保护环境做出贡献，从小事做起，从自己做起",
+          "difficulty": "medium",
+          "type": "summary"
+        }
+      ]
+    },
+    {
+      "story_id": "story_003",
+      "title": "老奶奶的爱心面馆",
+      "content": [
+        "王奶奶今年已经70岁了，她在小区门口开了一家小面馆，已经经营了20多年。",
+        "王奶奶的面馆虽然不大，但生意很好，因为她的面条味道鲜美，价格实惠。",
+        "更重要的是，王奶奶有一颗善良的心。她经常为附近的孤寡老人免费送面，还照顾一些生活困难的学生。",
+        "有一次，一个外地来的打工者生病了，没钱吃饭。王奶奶知道后，每天免费给他送面，直到他康复。",
+        "王奶奶还经常参加社区的公益活动，为贫困家庭捐款捐物。",
+        "虽然王奶奶年纪大了，但她仍然坚持每天早起和面、擀面，为顾客提供新鲜的面条。",
+        "王奶奶的善举感动了很多人，她的面馆成为了社区里温暖的象征。",
+        "这个故事告诉我们，善良和爱心不分年龄，每个人都可以用自己的方式帮助他人。"
+      ],
+      "questions": [
+        {
+          "question_id": "q003_01",
+          "question": "王奶奶今年多大年纪？",
+          "expected_fragments": [0],
+          "answer": "王奶奶今年70岁",
+          "difficulty": "easy",
+          "type": "factual"
+        },
+        {
+          "question_id": "q003_02",
+          "question": "王奶奶的面馆为什么生意很好？",
+          "expected_fragments": [1, 2],
+          "answer": "因为面条味道鲜美，价格实惠，而且王奶奶有一颗善良的心",
+          "difficulty": "medium",
+          "type": "reasoning"
+        },
+        {
+          "question_id": "q003_03",
+          "question": "王奶奶帮助过哪些人？",
+          "expected_fragments": [2, 3, 4],
+          "answer": "孤寡老人、生活困难的学生、生病的外地打工者、贫困家庭",
+          "difficulty": "medium",
+          "type": "reasoning"
+        },
+        {
+          "question_id": "q003_04",
+          "question": "王奶奶每天坚持做什么？",
+          "expected_fragments": [5],
+          "answer": "每天早起和面、擀面，为顾客提供新鲜的面条",
+          "difficulty": "easy",
+          "type": "factual"
+        },
+        {
+          "question_id": "q003_05",
+          "question": "这个故事告诉我们什么道理？",
+          "expected_fragments": [7],
+          "answer": "善良和爱心不分年龄，每个人都可以用自己的方式帮助他人",
+          "difficulty": "medium",
+          "type": "summary"
+        }
+      ]
+    },
+    {
+      "story_id": "story_004",
+      "title": "小红的科学实验",
+      "content": [
+        "小红是一名初中生，她对科学实验非常感兴趣，经常在家里做一些简单的实验。",
+        "有一天，小红在电视上看到了一个关于植物生长的科学节目，她决定自己动手做实验。",
+        "小红准备了几个花盆，分别种下了相同的种子，但给它们不同的条件：有的浇水多，有的浇水少，有的放在阳光下，有的放在阴凉处。",
+        "她每天观察植物的生长情况，记录下每盆植物的高度、叶子数量等数据。",
+        "经过一个月的观察，小红发现阳光充足、浇水适量的植物生长得最好。",
+        "小红把自己的实验结果整理成报告，在学校的科学展览会上展示。",
+        "她的实验获得了老师和同学们的好评，还获得了学校科学实验比赛的一等奖。",
+        "这次实验让小红更加热爱科学，她决定以后要成为一名科学家。",
+        "这个故事告诉我们，通过动手实验可以学到很多知识，科学精神需要从小培养。"
+      ],
+      "questions": [
+        {
+          "question_id": "q004_01",
+          "question": "小红是什么身份？",
+          "expected_fragments": [0],
+          "answer": "小红是一名初中生",
+          "difficulty": "easy",
+          "type": "factual"
+        },
+        {
+          "question_id": "q004_02",
+          "question": "小红为什么要做植物生长实验？",
+          "expected_fragments": [1],
+          "answer": "因为小红在电视上看到了关于植物生长的科学节目，决定自己动手做实验",
+          "difficulty": "easy",
+          "type": "factual"
+        },
+        {
+          "question_id": "q004_03",
+          "question": "小红是如何设计实验的？",
+          "expected_fragments": [2, 3],
+          "answer": "准备几个花盆种相同种子，给不同条件：浇水多少不同，光照条件不同，每天观察记录数据",
+          "difficulty": "medium",
+          "type": "reasoning"
+        },
+        {
+          "question_id": "q004_04",
+          "question": "小红的实验得出了什么结论？",
+          "expected_fragments": [4],
+          "answer": "阳光充足、浇水适量的植物生长得最好",
+          "difficulty": "medium",
+          "type": "reasoning"
+        },
+        {
+          "question_id": "q004_05",
+          "question": "小红的实验获得了什么成果？",
+          "expected_fragments": [5, 6, 7],
+          "answer": "在科学展览会展示，获得好评，获得科学实验比赛一等奖，决定成为科学家",
+          "difficulty": "medium",
+          "type": "reasoning"
+        },
+        {
+          "question_id": "q004_06",
+          "question": "这个故事告诉我们什么道理？",
+          "expected_fragments": [8],
+          "answer": "通过动手实验可以学到很多知识，科学精神需要从小培养",
+          "difficulty": "medium",
+          "type": "summary"
+        }
+      ]
+    },
+    {
+      "story_id": "story_005",
+      "title": "李老师的教育故事",
+      "content": [
+        "李老师是一名小学语文老师，从教已经30年了。她以耐心和爱心著称，深受学生和家长的喜爱。",
+        "李老师特别关注学习困难的学生，她认为每个孩子都有自己的优点，只是需要不同的教育方法。",
+        "小明是李老师班上一个成绩较差的学生，经常不交作业，上课也不认真听讲。",
+        "李老师没有放弃小明，而是经常找他谈心，了解他的想法和困难。",
+        "她发现小明对画画很感兴趣，于是鼓励他用画画的方式来理解课文内容。",
+        "李老师还经常表扬小明的进步，哪怕是很小的进步，她都会给予肯定。",
+        "经过一个学期的努力，小明的成绩有了明显提高，人也变得更加自信了。",
+        "小明的家长非常感激李老师，他们说李老师不仅教会了孩子知识，更教会了孩子如何做人。",
+        "李老师常说：'教育不是填鸭式灌输，而是点燃学生心中的火焰。'",
+        "这个故事告诉我们，好的教育需要耐心、爱心和智慧，每个孩子都值得被关爱和培养。"
+      ],
+      "questions": [
+        {
+          "question_id": "q005_01",
+          "question": "李老师教什么科目？",
+          "expected_fragments": [0],
+          "answer": "李老师教语文",
+          "difficulty": "easy",
+          "type": "factual"
+        },
+        {
+          "question_id": "q005_02",
+          "question": "李老师从教多少年了？",
+          "expected_fragments": [0],
+          "answer": "李老师从教30年了",
+          "difficulty": "easy",
+          "type": "factual"
+        },
+        {
+          "question_id": "q005_03",
+          "question": "小明最初的学习情况怎么样？",
+          "expected_fragments": [2],
+          "answer": "小明成绩较差，经常不交作业，上课也不认真听讲",
+          "difficulty": "easy",
+          "type": "factual"
+        },
+        {
+          "question_id": "q005_04",
+          "question": "李老师是如何帮助小明的？",
+          "expected_fragments": [3, 4, 5],
+          "answer": "经常找小明谈心，了解他的想法和困难，鼓励他用画画理解课文，经常表扬他的进步",
+          "difficulty": "medium",
+          "type": "reasoning"
+        },
+        {
+          "question_id": "q005_05",
+          "question": "李老师的教育方法取得了什么效果？",
+          "expected_fragments": [6, 7],
+          "answer": "小明的成绩明显提高，人更自信，家长感激李老师不仅教知识还教做人",
+          "difficulty": "medium",
+          "type": "reasoning"
+        },
+        {
+          "question_id": "q005_06",
+          "question": "李老师对教育的看法是什么？",
+          "expected_fragments": [8],
+          "answer": "教育不是填鸭式灌输，而是点燃学生心中的火焰",
+          "difficulty": "medium",
+          "type": "reasoning"
+        },
+        {
+          "question_id": "q005_07",
+          "question": "这个故事告诉我们什么道理？",
+          "expected_fragments": [9],
+          "answer": "好的教育需要耐心、爱心和智慧，每个孩子都值得被关爱和培养",
+          "difficulty": "medium",
+          "type": "summary"
+        }
+      ]
+    },
+    {
+      "story_id": "story_006",
+      "title": "张爷爷的果园",
+      "content": [
+        "张爷爷今年75岁，他在村子的山坡上种了一片果园，里面有苹果树、梨树、桃树等各种果树。",
+        "张爷爷年轻时是一名农业技术员，对果树种植很有经验。他退休后就开始经营这片果园。",
+        "果园里的果树都是张爷爷亲手栽种的，他每天都会去果园里查看果树的生长情况。",
+        "张爷爷不仅自己种植果树，还经常帮助村里的其他果农，传授种植技术。",
+        "有一年，果园遭遇了严重的病虫害，很多果树都生病了。张爷爷没有放弃，他查阅资料，请教专家，最终找到了解决方法。",
+        "经过几个月的努力，果园恢复了生机，果树重新开花结果。",
+        "张爷爷的果园不仅为他带来了经济收入，还成为了村里的一道美丽风景。",
+        "每到收获季节，张爷爷都会邀请村里的孩子们来果园里采摘水果，分享丰收的喜悦。",
+        "张爷爷常说：'种果树就像养孩子，需要耐心和爱心。'",
+        "这个故事告诉我们，勤劳和坚持是成功的关键，分享快乐会让生活更加美好。"
+      ],
+      "questions": [
+        {
+          "question_id": "q006_01",
+          "question": "张爷爷今年多大年纪？",
+          "expected_fragments": [0],
+          "answer": "张爷爷今年75岁",
+          "difficulty": "easy",
+          "type": "factual"
+        },
+        {
+          "question_id": "q006_02",
+          "question": "张爷爷的果园里种了哪些果树？",
+          "expected_fragments": [0],
+          "answer": "苹果树、梨树、桃树等各种果树",
+          "difficulty": "easy",
+          "type": "factual"
+        },
+        {
+          "question_id": "q006_03",
+          "question": "张爷爷以前是做什么工作的？",
+          "expected_fragments": [1],
+          "answer": "张爷爷以前是一名农业技术员",
+          "difficulty": "easy",
+          "type": "factual"
+        },
+        {
+          "question_id": "q006_04",
+          "question": "张爷爷是如何管理果园的？",
+          "expected_fragments": [2, 3],
+          "answer": "每天查看果树生长情况，帮助其他果农传授技术",
+          "difficulty": "medium",
+          "type": "reasoning"
+        },
+        {
+          "question_id": "q006_05",
+          "question": "果园遭遇病虫害时，张爷爷是怎么处理的？",
+          "expected_fragments": [4, 5],
+          "answer": "没有放弃，查阅资料，请教专家，找到解决方法，经过几个月努力恢复生机",
+          "difficulty": "medium",
+          "type": "reasoning"
+        },
+        {
+          "question_id": "q006_06",
+          "question": "张爷爷对种果树的看法是什么？",
+          "expected_fragments": [8],
+          "answer": "种果树就像养孩子，需要耐心和爱心",
+          "difficulty": "medium",
+          "type": "reasoning"
+        },
+        {
+          "question_id": "q006_07",
+          "question": "这个故事告诉我们什么道理？",
+          "expected_fragments": [9],
+          "answer": "勤劳和坚持是成功的关键，分享快乐会让生活更加美好",
+          "difficulty": "medium",
+          "type": "summary"
+        }
+      ]
+    },
+    {
+      "story_id": "story_007",
+      "title": "小华的志愿者经历",
+      "content": [
+        "小华是一名大学生，她利用课余时间参加各种志愿者活动，帮助需要帮助的人。",
+        "小华经常去敬老院看望老人，陪他们聊天，给他们读报纸，有时还会表演节目。",
+        "她还参加了社区的环境保护活动，定期清理街道垃圾，宣传环保知识。",
+        "有一次，小华听说山区的一所小学缺少图书，她立即组织同学们捐书，并亲自送到学校。",
+        "小华还利用自己的专业知识，为农民工子女提供免费的学习辅导。",
+        "虽然做志愿者很辛苦，但小华觉得很有意义。她说：'帮助别人就是帮助自己。'",
+        "小华的善举得到了社会的认可，她被评为'优秀志愿者'，还获得了奖学金。",
+        "小华的经历影响了很多人，她的同学们也开始积极参加志愿者活动。",
+        "这个故事告诉我们，年轻人应该承担社会责任，用自己的能力帮助他人，让社会更加美好。"
+      ],
+      "questions": [
+        {
+          "question_id": "q007_01",
+          "question": "小华是什么身份？",
+          "expected_fragments": [0],
+          "answer": "小华是一名大学生",
+          "difficulty": "easy",
+          "type": "factual"
+        },
+        {
+          "question_id": "q007_02",
+          "question": "小华参加了哪些志愿者活动？",
+          "expected_fragments": [1, 2, 3, 4],
+          "answer": "去敬老院看望老人、参加环保活动、为山区小学捐书、为农民工子女提供学习辅导",
+          "difficulty": "medium",
+          "type": "reasoning"
+        },
+        {
+          "question_id": "q007_03",
+          "question": "小华在敬老院做什么？",
+          "expected_fragments": [1],
+          "answer": "陪老人聊天，给他们读报纸，有时还会表演节目",
+          "difficulty": "easy",
+          "type": "factual"
+        },
+        {
+          "question_id": "q007_04",
+          "question": "小华对志愿者工作的看法是什么？",
+          "expected_fragments": [5],
+          "answer": "虽然很辛苦，但很有意义，帮助别人就是帮助自己",
+          "difficulty": "medium",
+          "type": "reasoning"
+        },
+        {
+          "question_id": "q007_05",
+          "question": "小华的志愿者工作获得了什么认可？",
+          "expected_fragments": [6, 7],
+          "answer": "被评为优秀志愿者，获得奖学金，影响了同学们也开始参加志愿者活动",
+          "difficulty": "medium",
+          "type": "reasoning"
+        },
+        {
+          "question_id": "q007_06",
+          "question": "这个故事告诉我们什么道理？",
+          "expected_fragments": [8],
+          "answer": "年轻人应该承担社会责任，用自己的能力帮助他人，让社会更加美好",
+          "difficulty": "medium",
+          "type": "summary"
+        }
+      ]
+    },
+    {
+      "story_id": "story_008",
+      "title": "王叔叔的创业故事",
+      "content": [
+        "王叔叔是一名下岗工人，他曾经在一家工厂工作了20多年，后来因为工厂倒闭而失业。",
+        "失业后，王叔叔没有气馁，他决定自己创业。经过市场调研，他发现当地缺少一家专门制作传统手工面条的店铺。",
+        "王叔叔年轻时跟父亲学过制作手工面条的技术，他决定利用这个技能开一家面馆。",
+        "创业初期，王叔叔遇到了很多困难：资金不足、客源稀少、技术需要改进等。",
+        "但他没有放弃，他每天早起晚归，不断改进面条的制作工艺，提高面条的质量。",
+        "王叔叔还经常向顾客征求意见，根据顾客的建议调整面条的口味和配料。",
+        "经过一年的努力，王叔叔的面馆生意越来越好，很多顾客都成了回头客。",
+        "现在，王叔叔的面馆已经成为了当地的名店，他还雇佣了几个员工，帮助其他下岗工人就业。",
+        "王叔叔常说：'困难是暂时的，只要不放弃，就一定能成功。'",
+        "这个故事告诉我们，面对困难要有勇气和毅力，创业需要坚持和创新。"
+      ],
+      "questions": [
+        {
+          "question_id": "q008_01",
+          "question": "王叔叔以前是做什么工作的？",
+          "expected_fragments": [0],
+          "answer": "王叔叔以前在工厂工作了20多年",
+          "difficulty": "easy",
+          "type": "factual"
+        },
+        {
+          "question_id": "q008_02",
+          "question": "王叔叔为什么决定开面馆？",
+          "expected_fragments": [1, 2],
+          "answer": "因为发现当地缺少专门制作传统手工面条的店铺，而且他学过制作手工面条的技术",
+          "difficulty": "medium",
+          "type": "reasoning"
+        },
+        {
+          "question_id": "q008_03",
+          "question": "王叔叔创业初期遇到了哪些困难？",
+          "expected_fragments": [3],
+          "answer": "资金不足、客源稀少、技术需要改进等",
+          "difficulty": "easy",
+          "type": "factual"
+        },
+        {
+          "question_id": "q008_04",
+          "question": "王叔叔是如何克服困难的？",
+          "expected_fragments": [4, 5],
+          "answer": "每天早起晚归，不断改进制作工艺，提高质量，向顾客征求意见，调整口味和配料",
+          "difficulty": "medium",
+          "type": "reasoning"
+        },
+        {
+          "question_id": "q008_05",
+          "question": "王叔叔的创业取得了什么成果？",
+          "expected_fragments": [6, 7],
+          "answer": "面馆生意越来越好，成为当地名店，雇佣员工帮助其他下岗工人就业",
+          "difficulty": "medium",
+          "type": "reasoning"
+        },
+        {
+          "question_id": "q008_06",
+          "question": "王叔叔对困难的态度是什么？",
+          "expected_fragments": [8],
+          "answer": "困难是暂时的，只要不放弃，就一定能成功",
+          "difficulty": "medium",
+          "type": "reasoning"
+        },
+        {
+          "question_id": "q008_07",
+          "question": "这个故事告诉我们什么道理？",
+          "expected_fragments": [9],
+          "answer": "面对困难要有勇气和毅力，创业需要坚持和创新",
+          "difficulty": "medium",
+          "type": "summary"
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "total_stories": 8,
+    "total_questions": 47,
+    "difficulty_distribution": {
+      "easy": 18,
+      "medium": 25,
+      "hard": 4
+    },
+    "type_distribution": {
+      "factual": 18,
+      "reasoning": 20,
+      "summary": 9
+    },
+    "created_date": "2024-01-01",
+    "description": "包含8个不同主题的故事，每个故事都有多个问答对，涵盖事实性、推理性、总结性等不同类型的问题"
+  }
+} 

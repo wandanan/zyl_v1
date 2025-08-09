@@ -1,0 +1,931 @@
+{
+  "all_results": [
+    {
+      "story_id": "story_001",
+      "story_title": "乡村医生的坚守",
+      "question": "李明是什么职业？",
+      "expected_fragments": [
+        0
+      ],
+      "retrieved_fragments": [
+        7,
+        2,
+        5
+      ],
+      "mrr_score": 0.0,
+      "hit_rate": 0.0,
+      "retrieval_time": 0.06115913391113281,
+      "difficulty": "easy",
+      "type": "factual"
+    },
+    {
+      "story_id": "story_001",
+      "story_title": "乡村医生的坚守",
+      "question": "村子里的医疗条件怎么样？",
+      "expected_fragments": [
+        1
+      ],
+      "retrieved_fragments": [
+        7,
+        2,
+        5
+      ],
+      "mrr_score": 0.0,
+      "hit_rate": 0.0,
+      "retrieval_time": 0.0389866828918457,
+      "difficulty": "easy",
+      "type": "factual"
+    },
+    {
+      "story_id": "story_001",
+      "story_title": "乡村医生的坚守",
+      "question": "张大爷得了什么病？",
+      "expected_fragments": [
+        3
+      ],
+      "retrieved_fragments": [
+        7,
+        2,
+        5
+      ],
+      "mrr_score": 0.0,
+      "hit_rate": 0.0,
+      "retrieval_time": 0.023125410079956055,
+      "difficulty": "easy",
+      "type": "factual"
+    },
+    {
+      "story_id": "story_001",
+      "story_title": "乡村医生的坚守",
+      "question": "为什么李明要回到家乡当医生？",
+      "expected_fragments": [
+        0,
+        2
+      ],
+      "retrieved_fragments": [
+        7,
+        2,
+        5
+      ],
+      "mrr_score": 0.5,
+      "hit_rate": 1.0,
+      "retrieval_time": 0.030327320098876953,
+      "difficulty": "medium",
+      "type": "reasoning"
+    },
+    {
+      "story_id": "story_001",
+      "story_title": "乡村医生的坚守",
+      "question": "李明是如何处理张大爷的紧急情况的？",
+      "expected_fragments": [
+        4
+      ],
+      "retrieved_fragments": [
+        7,
+        2,
+        5
+      ],
+      "mrr_score": 0.0,
+      "hit_rate": 0.0,
+      "retrieval_time": 0.02943706512451172,
+      "difficulty": "medium",
+      "type": "reasoning"
+    },
+    {
+      "story_id": "story_001",
+      "story_title": "乡村医生的坚守",
+      "question": "李明为什么被评为最美乡村医生？",
+      "expected_fragments": [
+        1,
+        2,
+        4,
+        5,
+        6
+      ],
+      "retrieved_fragments": [
+        7,
+        2,
+        5
+      ],
+      "mrr_score": 0.5,
+      "hit_rate": 1.0,
+      "retrieval_time": 0.028335094451904297,
+      "difficulty": "hard",
+      "type": "reasoning"
+    },
+    {
+      "story_id": "story_001",
+      "story_title": "乡村医生的坚守",
+      "question": "这个故事告诉我们什么道理？",
+      "expected_fragments": [
+        7
+      ],
+      "retrieved_fragments": [
+        7,
+        2,
+        5
+      ],
+      "mrr_score": 1.0,
+      "hit_rate": 1.0,
+      "retrieval_time": 0.02858757972717285,
+      "difficulty": "medium",
+      "type": "summary"
+    },
+    {
+      "story_id": "story_002",
+      "story_title": "小明的环保行动",
+      "question": "小明是什么身份？",
+      "expected_fragments": [
+        0
+      ],
+      "retrieved_fragments": [
+        0,
+        8,
+        2
+      ],
+      "mrr_score": 1.0,
+      "hit_rate": 1.0,
+      "retrieval_time": 0.020730972290039062,
+      "difficulty": "easy",
+      "type": "factual"
+    },
+    {
+      "story_id": "story_002",
+      "story_title": "小明的环保行动",
+      "question": "小明在路上看到了什么？",
+      "expected_fragments": [
+        1
+      ],
+      "retrieved_fragments": [
+        0,
+        8,
+        4
+      ],
+      "mrr_score": 0.0,
+      "hit_rate": 0.0,
+      "retrieval_time": 0.02242732048034668,
+      "difficulty": "easy",
+      "type": "factual"
+    },
+    {
+      "story_id": "story_002",
+      "story_title": "小明的环保行动",
+      "question": "小明采取了哪些环保行动？",
+      "expected_fragments": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "retrieved_fragments": [
+        0,
+        8,
+        4
+      ],
+      "mrr_score": 0.3333333333333333,
+      "hit_rate": 1.0,
+      "retrieval_time": 0.025127172470092773,
+      "difficulty": "medium",
+      "type": "reasoning"
+    },
+    {
+      "story_id": "story_002",
+      "story_title": "小明的环保行动",
+      "question": "小明的环保行动取得了什么效果？",
+      "expected_fragments": [
+        6,
+        7
+      ],
+      "retrieved_fragments": [
+        0,
+        8,
+        4
+      ],
+      "mrr_score": 0.0,
+      "hit_rate": 0.0,
+      "retrieval_time": 0.02807450294494629,
+      "difficulty": "medium",
+      "type": "reasoning"
+    },
+    {
+      "story_id": "story_002",
+      "story_title": "小明的环保行动",
+      "question": "这个故事告诉我们什么道理？",
+      "expected_fragments": [
+        8
+      ],
+      "retrieved_fragments": [
+        0,
+        8,
+        4
+      ],
+      "mrr_score": 0.5,
+      "hit_rate": 1.0,
+      "retrieval_time": 0.031579017639160156,
+      "difficulty": "medium",
+      "type": "summary"
+    },
+    {
+      "story_id": "story_003",
+      "story_title": "老奶奶的爱心面馆",
+      "question": "王奶奶今年多大年纪？",
+      "expected_fragments": [
+        0
+      ],
+      "retrieved_fragments": [
+        7,
+        4,
+        2
+      ],
+      "mrr_score": 0.0,
+      "hit_rate": 0.0,
+      "retrieval_time": 0.026430606842041016,
+      "difficulty": "easy",
+      "type": "factual"
+    },
+    {
+      "story_id": "story_003",
+      "story_title": "老奶奶的爱心面馆",
+      "question": "王奶奶的面馆为什么生意很好？",
+      "expected_fragments": [
+        1,
+        2
+      ],
+      "retrieved_fragments": [
+        7,
+        4,
+        2
+      ],
+      "mrr_score": 0.3333333333333333,
+      "hit_rate": 1.0,
+      "retrieval_time": 0.03103494644165039,
+      "difficulty": "medium",
+      "type": "reasoning"
+    },
+    {
+      "story_id": "story_003",
+      "story_title": "老奶奶的爱心面馆",
+      "question": "王奶奶帮助过哪些人？",
+      "expected_fragments": [
+        2,
+        3,
+        4
+      ],
+      "retrieved_fragments": [
+        7,
+        4,
+        2
+      ],
+      "mrr_score": 0.5,
+      "hit_rate": 1.0,
+      "retrieval_time": 0.025768280029296875,
+      "difficulty": "medium",
+      "type": "reasoning"
+    },
+    {
+      "story_id": "story_003",
+      "story_title": "老奶奶的爱心面馆",
+      "question": "王奶奶每天坚持做什么？",
+      "expected_fragments": [
+        5
+      ],
+      "retrieved_fragments": [
+        7,
+        4,
+        2
+      ],
+      "mrr_score": 0.0,
+      "hit_rate": 0.0,
+      "retrieval_time": 0.020737409591674805,
+      "difficulty": "easy",
+      "type": "factual"
+    },
+    {
+      "story_id": "story_003",
+      "story_title": "老奶奶的爱心面馆",
+      "question": "这个故事告诉我们什么道理？",
+      "expected_fragments": [
+        7
+      ],
+      "retrieved_fragments": [
+        7,
+        4,
+        2
+      ],
+      "mrr_score": 1.0,
+      "hit_rate": 1.0,
+      "retrieval_time": 0.026015043258666992,
+      "difficulty": "medium",
+      "type": "summary"
+    },
+    {
+      "story_id": "story_004",
+      "story_title": "小红的科学实验",
+      "question": "小红是什么身份？",
+      "expected_fragments": [
+        0
+      ],
+      "retrieved_fragments": [
+        8,
+        0,
+        7
+      ],
+      "mrr_score": 0.5,
+      "hit_rate": 1.0,
+      "retrieval_time": 0.020282506942749023,
+      "difficulty": "easy",
+      "type": "factual"
+    },
+    {
+      "story_id": "story_004",
+      "story_title": "小红的科学实验",
+      "question": "小红为什么要做植物生长实验？",
+      "expected_fragments": [
+        1
+      ],
+      "retrieved_fragments": [
+        8,
+        0,
+        7
+      ],
+      "mrr_score": 0.0,
+      "hit_rate": 0.0,
+      "retrieval_time": 0.02797985076904297,
+      "difficulty": "easy",
+      "type": "factual"
+    },
+    {
+      "story_id": "story_004",
+      "story_title": "小红的科学实验",
+      "question": "小红是如何设计实验的？",
+      "expected_fragments": [
+        2,
+        3
+      ],
+      "retrieved_fragments": [
+        8,
+        0,
+        7
+      ],
+      "mrr_score": 0.0,
+      "hit_rate": 0.0,
+      "retrieval_time": 0.025820016860961914,
+      "difficulty": "medium",
+      "type": "reasoning"
+    },
+    {
+      "story_id": "story_004",
+      "story_title": "小红的科学实验",
+      "question": "小红的实验得出了什么结论？",
+      "expected_fragments": [
+        4
+      ],
+      "retrieved_fragments": [
+        8,
+        0,
+        7
+      ],
+      "mrr_score": 0.0,
+      "hit_rate": 0.0,
+      "retrieval_time": 0.025246381759643555,
+      "difficulty": "medium",
+      "type": "reasoning"
+    },
+    {
+      "story_id": "story_004",
+      "story_title": "小红的科学实验",
+      "question": "小红的实验获得了什么成果？",
+      "expected_fragments": [
+        5,
+        6,
+        7
+      ],
+      "retrieved_fragments": [
+        8,
+        0,
+        7
+      ],
+      "mrr_score": 0.3333333333333333,
+      "hit_rate": 1.0,
+      "retrieval_time": 0.027645349502563477,
+      "difficulty": "medium",
+      "type": "reasoning"
+    },
+    {
+      "story_id": "story_004",
+      "story_title": "小红的科学实验",
+      "question": "这个故事告诉我们什么道理？",
+      "expected_fragments": [
+        8
+      ],
+      "retrieved_fragments": [
+        8,
+        0,
+        7
+      ],
+      "mrr_score": 1.0,
+      "hit_rate": 1.0,
+      "retrieval_time": 0.02700328826904297,
+      "difficulty": "medium",
+      "type": "summary"
+    },
+    {
+      "story_id": "story_005",
+      "story_title": "李老师的教育故事",
+      "question": "李老师教什么科目？",
+      "expected_fragments": [
+        0
+      ],
+      "retrieved_fragments": [
+        2,
+        9,
+        3
+      ],
+      "mrr_score": 0.0,
+      "hit_rate": 0.0,
+      "retrieval_time": 0.023014068603515625,
+      "difficulty": "easy",
+      "type": "factual"
+    },
+    {
+      "story_id": "story_005",
+      "story_title": "李老师的教育故事",
+      "question": "李老师从教多少年了？",
+      "expected_fragments": [
+        0
+      ],
+      "retrieved_fragments": [
+        2,
+        9,
+        3
+      ],
+      "mrr_score": 0.0,
+      "hit_rate": 0.0,
+      "retrieval_time": 0.023081541061401367,
+      "difficulty": "easy",
+      "type": "factual"
+    },
+    {
+      "story_id": "story_005",
+      "story_title": "李老师的教育故事",
+      "question": "小明最初的学习情况怎么样？",
+      "expected_fragments": [
+        2
+      ],
+      "retrieved_fragments": [
+        9,
+        2,
+        3
+      ],
+      "mrr_score": 0.5,
+      "hit_rate": 1.0,
+      "retrieval_time": 0.025963783264160156,
+      "difficulty": "easy",
+      "type": "factual"
+    },
+    {
+      "story_id": "story_005",
+      "story_title": "李老师的教育故事",
+      "question": "李老师是如何帮助小明的？",
+      "expected_fragments": [
+        3,
+        4,
+        5
+      ],
+      "retrieved_fragments": [
+        2,
+        9,
+        3
+      ],
+      "mrr_score": 0.3333333333333333,
+      "hit_rate": 1.0,
+      "retrieval_time": 0.030068397521972656,
+      "difficulty": "medium",
+      "type": "reasoning"
+    },
+    {
+      "story_id": "story_005",
+      "story_title": "李老师的教育故事",
+      "question": "李老师的教育方法取得了什么效果？",
+      "expected_fragments": [
+        6,
+        7
+      ],
+      "retrieved_fragments": [
+        2,
+        9,
+        3
+      ],
+      "mrr_score": 0.0,
+      "hit_rate": 0.0,
+      "retrieval_time": 0.02991771697998047,
+      "difficulty": "medium",
+      "type": "reasoning"
+    },
+    {
+      "story_id": "story_005",
+      "story_title": "李老师的教育故事",
+      "question": "李老师对教育的看法是什么？",
+      "expected_fragments": [
+        8
+      ],
+      "retrieved_fragments": [
+        2,
+        9,
+        3
+      ],
+      "mrr_score": 0.0,
+      "hit_rate": 0.0,
+      "retrieval_time": 0.02705669403076172,
+      "difficulty": "medium",
+      "type": "reasoning"
+    },
+    {
+      "story_id": "story_005",
+      "story_title": "李老师的教育故事",
+      "question": "这个故事告诉我们什么道理？",
+      "expected_fragments": [
+        9
+      ],
+      "retrieved_fragments": [
+        9,
+        2,
+        3
+      ],
+      "mrr_score": 1.0,
+      "hit_rate": 1.0,
+      "retrieval_time": 0.026850461959838867,
+      "difficulty": "medium",
+      "type": "summary"
+    },
+    {
+      "story_id": "story_006",
+      "story_title": "张爷爷的果园",
+      "question": "张爷爷今年多大年纪？",
+      "expected_fragments": [
+        0
+      ],
+      "retrieved_fragments": [
+        6,
+        8,
+        1
+      ],
+      "mrr_score": 0.0,
+      "hit_rate": 0.0,
+      "retrieval_time": 0.021604061126708984,
+      "difficulty": "easy",
+      "type": "factual"
+    },
+    {
+      "story_id": "story_006",
+      "story_title": "张爷爷的果园",
+      "question": "张爷爷的果园里种了哪些果树？",
+      "expected_fragments": [
+        0
+      ],
+      "retrieved_fragments": [
+        6,
+        8,
+        1
+      ],
+      "mrr_score": 0.0,
+      "hit_rate": 0.0,
+      "retrieval_time": 0.027009963989257812,
+      "difficulty": "easy",
+      "type": "factual"
+    },
+    {
+      "story_id": "story_006",
+      "story_title": "张爷爷的果园",
+      "question": "张爷爷以前是做什么工作的？",
+      "expected_fragments": [
+        1
+      ],
+      "retrieved_fragments": [
+        6,
+        8,
+        1
+      ],
+      "mrr_score": 0.3333333333333333,
+      "hit_rate": 1.0,
+      "retrieval_time": 0.02616429328918457,
+      "difficulty": "easy",
+      "type": "factual"
+    },
+    {
+      "story_id": "story_006",
+      "story_title": "张爷爷的果园",
+      "question": "张爷爷是如何管理果园的？",
+      "expected_fragments": [
+        2,
+        3
+      ],
+      "retrieved_fragments": [
+        6,
+        8,
+        1
+      ],
+      "mrr_score": 0.0,
+      "hit_rate": 0.0,
+      "retrieval_time": 0.029802560806274414,
+      "difficulty": "medium",
+      "type": "reasoning"
+    },
+    {
+      "story_id": "story_006",
+      "story_title": "张爷爷的果园",
+      "question": "果园遭遇病虫害时，张爷爷是怎么处理的？",
+      "expected_fragments": [
+        4,
+        5
+      ],
+      "retrieved_fragments": [
+        6,
+        8,
+        1
+      ],
+      "mrr_score": 0.0,
+      "hit_rate": 0.0,
+      "retrieval_time": 0.027752161026000977,
+      "difficulty": "medium",
+      "type": "reasoning"
+    },
+    {
+      "story_id": "story_006",
+      "story_title": "张爷爷的果园",
+      "question": "张爷爷对种果树的看法是什么？",
+      "expected_fragments": [
+        8
+      ],
+      "retrieved_fragments": [
+        6,
+        8,
+        1
+      ],
+      "mrr_score": 0.5,
+      "hit_rate": 1.0,
+      "retrieval_time": 0.02789926528930664,
+      "difficulty": "medium",
+      "type": "reasoning"
+    },
+    {
+      "story_id": "story_006",
+      "story_title": "张爷爷的果园",
+      "question": "这个故事告诉我们什么道理？",
+      "expected_fragments": [
+        9
+      ],
+      "retrieved_fragments": [
+        6,
+        8,
+        1
+      ],
+      "mrr_score": 0.0,
+      "hit_rate": 0.0,
+      "retrieval_time": 0.02541804313659668,
+      "difficulty": "medium",
+      "type": "summary"
+    },
+    {
+      "story_id": "story_007",
+      "story_title": "小华的志愿者经历",
+      "question": "小华是什么身份？",
+      "expected_fragments": [
+        0
+      ],
+      "retrieved_fragments": [
+        8,
+        0,
+        3
+      ],
+      "mrr_score": 0.5,
+      "hit_rate": 1.0,
+      "retrieval_time": 0.021571636199951172,
+      "difficulty": "easy",
+      "type": "factual"
+    },
+    {
+      "story_id": "story_007",
+      "story_title": "小华的志愿者经历",
+      "question": "小华参加了哪些志愿者活动？",
+      "expected_fragments": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "retrieved_fragments": [
+        8,
+        0,
+        3
+      ],
+      "mrr_score": 0.3333333333333333,
+      "hit_rate": 1.0,
+      "retrieval_time": 0.026386737823486328,
+      "difficulty": "medium",
+      "type": "reasoning"
+    },
+    {
+      "story_id": "story_007",
+      "story_title": "小华的志愿者经历",
+      "question": "小华在敬老院做什么？",
+      "expected_fragments": [
+        1
+      ],
+      "retrieved_fragments": [
+        8,
+        0,
+        3
+      ],
+      "mrr_score": 0.0,
+      "hit_rate": 0.0,
+      "retrieval_time": 0.021347522735595703,
+      "difficulty": "easy",
+      "type": "factual"
+    },
+    {
+      "story_id": "story_007",
+      "story_title": "小华的志愿者经历",
+      "question": "小华对志愿者工作的看法是什么？",
+      "expected_fragments": [
+        5
+      ],
+      "retrieved_fragments": [
+        8,
+        0,
+        3
+      ],
+      "mrr_score": 0.0,
+      "hit_rate": 0.0,
+      "retrieval_time": 0.027867555618286133,
+      "difficulty": "medium",
+      "type": "reasoning"
+    },
+    {
+      "story_id": "story_007",
+      "story_title": "小华的志愿者经历",
+      "question": "小华的志愿者工作获得了什么认可？",
+      "expected_fragments": [
+        6,
+        7
+      ],
+      "retrieved_fragments": [
+        8,
+        0,
+        3
+      ],
+      "mrr_score": 0.0,
+      "hit_rate": 0.0,
+      "retrieval_time": 0.033986568450927734,
+      "difficulty": "medium",
+      "type": "reasoning"
+    },
+    {
+      "story_id": "story_007",
+      "story_title": "小华的志愿者经历",
+      "question": "这个故事告诉我们什么道理？",
+      "expected_fragments": [
+        8
+      ],
+      "retrieved_fragments": [
+        8,
+        0,
+        3
+      ],
+      "mrr_score": 1.0,
+      "hit_rate": 1.0,
+      "retrieval_time": 0.02798151969909668,
+      "difficulty": "medium",
+      "type": "summary"
+    },
+    {
+      "story_id": "story_008",
+      "story_title": "王叔叔的创业故事",
+      "question": "王叔叔以前是做什么工作的？",
+      "expected_fragments": [
+        0
+      ],
+      "retrieved_fragments": [
+        2,
+        7,
+        9
+      ],
+      "mrr_score": 0.0,
+      "hit_rate": 0.0,
+      "retrieval_time": 0.02668285369873047,
+      "difficulty": "easy",
+      "type": "factual"
+    },
+    {
+      "story_id": "story_008",
+      "story_title": "王叔叔的创业故事",
+      "question": "王叔叔为什么决定开面馆？",
+      "expected_fragments": [
+        1,
+        2
+      ],
+      "retrieved_fragments": [
+        2,
+        7,
+        9
+      ],
+      "mrr_score": 1.0,
+      "hit_rate": 1.0,
+      "retrieval_time": 0.03106403350830078,
+      "difficulty": "medium",
+      "type": "reasoning"
+    },
+    {
+      "story_id": "story_008",
+      "story_title": "王叔叔的创业故事",
+      "question": "王叔叔创业初期遇到了哪些困难？",
+      "expected_fragments": [
+        3
+      ],
+      "retrieved_fragments": [
+        2,
+        7,
+        9
+      ],
+      "mrr_score": 0.0,
+      "hit_rate": 0.0,
+      "retrieval_time": 0.034806251525878906,
+      "difficulty": "easy",
+      "type": "factual"
+    },
+    {
+      "story_id": "story_008",
+      "story_title": "王叔叔的创业故事",
+      "question": "王叔叔是如何克服困难的？",
+      "expected_fragments": [
+        4,
+        5
+      ],
+      "retrieved_fragments": [
+        2,
+        7,
+        9
+      ],
+      "mrr_score": 0.0,
+      "hit_rate": 0.0,
+      "retrieval_time": 0.03249025344848633,
+      "difficulty": "medium",
+      "type": "reasoning"
+    },
+    {
+      "story_id": "story_008",
+      "story_title": "王叔叔的创业故事",
+      "question": "王叔叔的创业取得了什么成果？",
+      "expected_fragments": [
+        6,
+        7
+      ],
+      "retrieved_fragments": [
+        2,
+        7,
+        9
+      ],
+      "mrr_score": 0.5,
+      "hit_rate": 1.0,
+      "retrieval_time": 0.03203439712524414,
+      "difficulty": "medium",
+      "type": "reasoning"
+    },
+    {
+      "story_id": "story_008",
+      "story_title": "王叔叔的创业故事",
+      "question": "王叔叔对困难的态度是什么？",
+      "expected_fragments": [
+        8
+      ],
+      "retrieved_fragments": [
+        2,
+        7,
+        9
+      ],
+      "mrr_score": 0.0,
+      "hit_rate": 0.0,
+      "retrieval_time": 0.025783777236938477,
+      "difficulty": "medium",
+      "type": "reasoning"
+    },
+    {
+      "story_id": "story_008",
+      "story_title": "王叔叔的创业故事",
+      "question": "这个故事告诉我们什么道理？",
+      "expected_fragments": [
+        9
+      ],
+      "retrieved_fragments": [
+        2,
+        7,
+        9
+      ],
+      "mrr_score": 0.3333333333333333,
+      "hit_rate": 1.0,
+      "retrieval_time": 0.02788066864013672,
+      "difficulty": "medium",
+      "type": "summary"
+    }
+  ]
+}

@@ -1,0 +1,1816 @@
+{
+  "model_info": {
+    "engine": "AdvancedZipperQueryEngineV2",
+    "config": {
+      "bge_model_path": "models--BAAI--bge-small-zh-v1.5/snapshots/7999e1d3359715c523056ef9478215996d62a620",
+      "embedding_dim": 1024,
+      "rerank_top_n": 100,
+      "final_top_k": 10,
+      "use_stateful_reranking": true,
+      "context_memory_decay": 0.8
+    }
+  },
+  "evaluation_summary": {
+    "total_queries": 51,
+    "domain": "ecom",
+    "k_values": [
+      1,
+      3,
+      5,
+      10
+    ],
+    "metrics": {
+      "average_mrr_at_1": 0.0,
+      "average_hit_rate_at_1": 0.0,
+      "average_recall_at_1": 0.0,
+      "average_precision_at_1": 0.0,
+      "average_mrr_at_3": 0.01,
+      "average_hit_rate_at_3": 0.02,
+      "average_recall_at_3": 0.02,
+      "average_precision_at_3": 0.006666666666666666,
+      "average_mrr_at_5": 0.01,
+      "average_hit_rate_at_5": 0.02,
+      "average_recall_at_5": 0.02,
+      "average_precision_at_5": 0.004,
+      "average_mrr_at_10": 0.01,
+      "average_hit_rate_at_10": 0.02,
+      "average_recall_at_10": 0.02,
+      "average_precision_at_10": 0.002
+    },
+    "average_retrieval_time": 0.06073849201202393
+  },
+  "timestamp": "2025-08-08 23:14:51",
+  "details": [
+    {
+      "qid": 200000,
+      "query": "大落地窗",
+      "expected_pids": [
+        260
+      ],
+      "retrieved_pids": [
+        527,
+        1241,
+        268589,
+        1352,
+        1434,
+        897,
+        2284,
+        2082,
+        839,
+        780
+      ],
+      "retrieval_time": 0.10568904876708984,
+      "metrics": {
+        "mrr_at_1": 0.0,
+        "hit_rate_at_1": 0.0,
+        "recall_at_1": 0.0,
+        "precision_at_1": 0.0,
+        "mrr_at_3": 0.0,
+        "hit_rate_at_3": 0.0,
+        "recall_at_3": 0.0,
+        "precision_at_3": 0.0,
+        "mrr_at_5": 0.0,
+        "hit_rate_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "precision_at_5": 0.0,
+        "mrr_at_10": 0.0,
+        "hit_rate_at_10": 0.0,
+        "recall_at_10": 0.0,
+        "precision_at_10": 0.0
+      }
+    },
+    {
+      "qid": 200001,
+      "query": "种花呂线",
+      "expected_pids": [
+        779
+      ],
+      "retrieved_pids": [
+        770909,
+        1724,
+        351,
+        781,
+        1443,
+        1822,
+        1920,
+        615014
+      ],
+      "retrieval_time": 0.05376172065734863,
+      "metrics": {
+        "mrr_at_1": 0.0,
+        "hit_rate_at_1": 0.0,
+        "recall_at_1": 0.0,
+        "precision_at_1": 0.0,
+        "mrr_at_3": 0.0,
+        "hit_rate_at_3": 0.0,
+        "recall_at_3": 0.0,
+        "precision_at_3": 0.0,
+        "mrr_at_5": 0.0,
+        "hit_rate_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "precision_at_5": 0.0,
+        "mrr_at_10": 0.0,
+        "hit_rate_at_10": 0.0,
+        "recall_at_10": 0.0,
+        "precision_at_10": 0.0
+      }
+    },
+    {
+      "qid": 200002,
+      "query": "墙面底漆",
+      "expected_pids": [
+        3109
+      ],
+      "retrieved_pids": [
+        417,
+        655407,
+        2112,
+        2643,
+        926257,
+        2316,
+        1808,
+        980,
+        673975
+      ],
+      "retrieval_time": 0.0584256649017334,
+      "metrics": {
+        "mrr_at_1": 0.0,
+        "hit_rate_at_1": 0.0,
+        "recall_at_1": 0.0,
+        "precision_at_1": 0.0,
+        "mrr_at_3": 0.0,
+        "hit_rate_at_3": 0.0,
+        "recall_at_3": 0.0,
+        "precision_at_3": 0.0,
+        "mrr_at_5": 0.0,
+        "hit_rate_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "precision_at_5": 0.0,
+        "mrr_at_10": 0.0,
+        "hit_rate_at_10": 0.0,
+        "recall_at_10": 0.0,
+        "precision_at_10": 0.0
+      }
+    },
+    {
+      "qid": 200003,
+      "query": "启辰r50大灯罩",
+      "expected_pids": [
+        4836
+      ],
+      "retrieved_pids": [
+        3840,
+        166161,
+        1568,
+        597582,
+        543,
+        2568,
+        1091,
+        223
+      ],
+      "retrieval_time": 0.05439925193786621,
+      "metrics": {
+        "mrr_at_1": 0.0,
+        "hit_rate_at_1": 0.0,
+        "recall_at_1": 0.0,
+        "precision_at_1": 0.0,
+        "mrr_at_3": 0.0,
+        "hit_rate_at_3": 0.0,
+        "recall_at_3": 0.0,
+        "precision_at_3": 0.0,
+        "mrr_at_5": 0.0,
+        "hit_rate_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "precision_at_5": 0.0,
+        "mrr_at_10": 0.0,
+        "hit_rate_at_10": 0.0,
+        "recall_at_10": 0.0,
+        "precision_at_10": 0.0
+      }
+    },
+    {
+      "qid": 200004,
+      "query": "小金桔",
+      "expected_pids": [
+        4911
+      ],
+      "retrieved_pids": [
+        39,
+        3915,
+        761667,
+        2603,
+        1590,
+        941,
+        5
+      ],
+      "retrieval_time": 0.05919766426086426,
+      "metrics": {
+        "mrr_at_1": 0.0,
+        "hit_rate_at_1": 0.0,
+        "recall_at_1": 0.0,
+        "precision_at_1": 0.0,
+        "mrr_at_3": 0.0,
+        "hit_rate_at_3": 0.0,
+        "recall_at_3": 0.0,
+        "precision_at_3": 0.0,
+        "mrr_at_5": 0.0,
+        "hit_rate_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "precision_at_5": 0.0,
+        "mrr_at_10": 0.0,
+        "hit_rate_at_10": 0.0,
+        "recall_at_10": 0.0,
+        "precision_at_10": 0.0
+      }
+    },
+    {
+      "qid": 200005,
+      "query": "diy卡包材料包",
+      "expected_pids": [
+        6371
+      ],
+      "retrieved_pids": [
+        2647,
+        2044,
+        903,
+        2948,
+        1254,
+        2130,
+        1585,
+        2966
+      ],
+      "retrieval_time": 0.05476117134094238,
+      "metrics": {
+        "mrr_at_1": 0.0,
+        "hit_rate_at_1": 0.0,
+        "recall_at_1": 0.0,
+        "precision_at_1": 0.0,
+        "mrr_at_3": 0.0,
+        "hit_rate_at_3": 0.0,
+        "recall_at_3": 0.0,
+        "precision_at_3": 0.0,
+        "mrr_at_5": 0.0,
+        "hit_rate_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "precision_at_5": 0.0,
+        "mrr_at_10": 0.0,
+        "hit_rate_at_10": 0.0,
+        "recall_at_10": 0.0,
+        "precision_at_10": 0.0
+      }
+    },
+    {
+      "qid": 200006,
+      "query": "约肤深层滋润免蒸发膜",
+      "expected_pids": [
+        6892
+      ],
+      "retrieved_pids": [
+        7,
+        938691,
+        1602,
+        708751,
+        1832
+      ],
+      "retrieval_time": 0.06056094169616699,
+      "metrics": {
+        "mrr_at_1": 0.0,
+        "hit_rate_at_1": 0.0,
+        "recall_at_1": 0.0,
+        "precision_at_1": 0.0,
+        "mrr_at_3": 0.0,
+        "hit_rate_at_3": 0.0,
+        "recall_at_3": 0.0,
+        "precision_at_3": 0.0,
+        "mrr_at_5": 0.0,
+        "hit_rate_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "precision_at_5": 0.0,
+        "mrr_at_10": 0.0,
+        "hit_rate_at_10": 0.0,
+        "recall_at_10": 0.0,
+        "precision_at_10": 0.0
+      }
+    },
+    {
+      "qid": 200007,
+      "query": "按摩垫",
+      "expected_pids": [
+        8159
+      ],
+      "retrieved_pids": [
+        1160,
+        356106,
+        1656,
+        342,
+        273,
+        1740,
+        1066,
+        2588,
+        1518
+      ],
+      "retrieval_time": 0.049033164978027344,
+      "metrics": {
+        "mrr_at_1": 0.0,
+        "hit_rate_at_1": 0.0,
+        "recall_at_1": 0.0,
+        "precision_at_1": 0.0,
+        "mrr_at_3": 0.0,
+        "hit_rate_at_3": 0.0,
+        "recall_at_3": 0.0,
+        "precision_at_3": 0.0,
+        "mrr_at_5": 0.0,
+        "hit_rate_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "precision_at_5": 0.0,
+        "mrr_at_10": 0.0,
+        "hit_rate_at_10": 0.0,
+        "recall_at_10": 0.0,
+        "precision_at_10": 0.0
+      }
+    },
+    {
+      "qid": 200008,
+      "query": "预适应训练仪",
+      "expected_pids": [
+        8741
+      ],
+      "retrieved_pids": [
+        1688,
+        505950,
+        388569,
+        3006,
+        662,
+        185,
+        1416,
+        2836,
+        1326
+      ],
+      "retrieval_time": 0.04885077476501465,
+      "metrics": {
+        "mrr_at_1": 0.0,
+        "hit_rate_at_1": 0.0,
+        "recall_at_1": 0.0,
+        "precision_at_1": 0.0,
+        "mrr_at_3": 0.0,
+        "hit_rate_at_3": 0.0,
+        "recall_at_3": 0.0,
+        "precision_at_3": 0.0,
+        "mrr_at_5": 0.0,
+        "hit_rate_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "precision_at_5": 0.0,
+        "mrr_at_10": 0.0,
+        "hit_rate_at_10": 0.0,
+        "recall_at_10": 0.0,
+        "precision_at_10": 0.0
+      }
+    },
+    {
+      "qid": 200009,
+      "query": "厕所明沟盖板",
+      "expected_pids": [
+        8922
+      ],
+      "retrieved_pids": [
+        74739,
+        1680,
+        2308,
+        1364,
+        764481,
+        1158,
+        84900,
+        1759
+      ],
+      "retrieval_time": 0.059259891510009766,
+      "metrics": {
+        "mrr_at_1": 0.0,
+        "hit_rate_at_1": 0.0,
+        "recall_at_1": 0.0,
+        "precision_at_1": 0.0,
+        "mrr_at_3": 0.0,
+        "hit_rate_at_3": 0.0,
+        "recall_at_3": 0.0,
+        "precision_at_3": 0.0,
+        "mrr_at_5": 0.0,
+        "hit_rate_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "precision_at_5": 0.0,
+        "mrr_at_10": 0.0,
+        "hit_rate_at_10": 0.0,
+        "recall_at_10": 0.0,
+        "precision_at_10": 0.0
+      }
+    },
+    {
+      "qid": 200010,
+      "query": "鉴别真假",
+      "expected_pids": [
+        8951
+      ],
+      "retrieved_pids": [
+        2382,
+        271,
+        1692,
+        269,
+        1233,
+        1704
+      ],
+      "retrieval_time": 0.05779242515563965,
+      "metrics": {
+        "mrr_at_1": 0.0,
+        "hit_rate_at_1": 0.0,
+        "recall_at_1": 0.0,
+        "precision_at_1": 0.0,
+        "mrr_at_3": 0.0,
+        "hit_rate_at_3": 0.0,
+        "recall_at_3": 0.0,
+        "precision_at_3": 0.0,
+        "mrr_at_5": 0.0,
+        "hit_rate_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "precision_at_5": 0.0,
+        "mrr_at_10": 0.0,
+        "hit_rate_at_10": 0.0,
+        "recall_at_10": 0.0,
+        "precision_at_10": 0.0
+      }
+    },
+    {
+      "qid": 200011,
+      "query": "毛衣绿色拼接",
+      "expected_pids": [
+        10925
+      ],
+      "retrieved_pids": [
+        1734,
+        2680,
+        969311,
+        634,
+        2683,
+        690365
+      ],
+      "retrieval_time": 0.06419110298156738,
+      "metrics": {
+        "mrr_at_1": 0.0,
+        "hit_rate_at_1": 0.0,
+        "recall_at_1": 0.0,
+        "precision_at_1": 0.0,
+        "mrr_at_3": 0.0,
+        "hit_rate_at_3": 0.0,
+        "recall_at_3": 0.0,
+        "precision_at_3": 0.0,
+        "mrr_at_5": 0.0,
+        "hit_rate_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "precision_at_5": 0.0,
+        "mrr_at_10": 0.0,
+        "hit_rate_at_10": 0.0,
+        "recall_at_10": 0.0,
+        "precision_at_10": 0.0
+      }
+    },
+    {
+      "qid": 200012,
+      "query": "亚克力型材嵌条",
+      "expected_pids": [
+        12033
+      ],
+      "retrieved_pids": [
+        1033,
+        2043,
+        471,
+        544,
+        1738,
+        2050
+      ],
+      "retrieval_time": 0.061574697494506836,
+      "metrics": {
+        "mrr_at_1": 0.0,
+        "hit_rate_at_1": 0.0,
+        "recall_at_1": 0.0,
+        "precision_at_1": 0.0,
+        "mrr_at_3": 0.0,
+        "hit_rate_at_3": 0.0,
+        "recall_at_3": 0.0,
+        "precision_at_3": 0.0,
+        "mrr_at_5": 0.0,
+        "hit_rate_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "precision_at_5": 0.0,
+        "mrr_at_10": 0.0,
+        "hit_rate_at_10": 0.0,
+        "recall_at_10": 0.0,
+        "precision_at_10": 0.0
+      }
+    },
+    {
+      "qid": 200013,
+      "query": "短毛纯银熊",
+      "expected_pids": [
+        12277
+      ],
+      "retrieved_pids": [
+        101386,
+        415445,
+        2562,
+        1054,
+        975735,
+        475,
+        2968,
+        97915
+      ],
+      "retrieval_time": 0.061965227127075195,
+      "metrics": {
+        "mrr_at_1": 0.0,
+        "hit_rate_at_1": 0.0,
+        "recall_at_1": 0.0,
+        "precision_at_1": 0.0,
+        "mrr_at_3": 0.0,
+        "hit_rate_at_3": 0.0,
+        "recall_at_3": 0.0,
+        "precision_at_3": 0.0,
+        "mrr_at_5": 0.0,
+        "hit_rate_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "precision_at_5": 0.0,
+        "mrr_at_10": 0.0,
+        "hit_rate_at_10": 0.0,
+        "recall_at_10": 0.0,
+        "precision_at_10": 0.0
+      }
+    },
+    {
+      "qid": 200014,
+      "query": "树叶沙发椅单",
+      "expected_pids": [
+        14142
+      ],
+      "retrieved_pids": [
+        1668,
+        660444,
+        1062,
+        2738,
+        1274
+      ],
+      "retrieval_time": 0.05495262145996094,
+      "metrics": {
+        "mrr_at_1": 0.0,
+        "hit_rate_at_1": 0.0,
+        "recall_at_1": 0.0,
+        "precision_at_1": 0.0,
+        "mrr_at_3": 0.0,
+        "hit_rate_at_3": 0.0,
+        "recall_at_3": 0.0,
+        "precision_at_3": 0.0,
+        "mrr_at_5": 0.0,
+        "hit_rate_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "precision_at_5": 0.0,
+        "mrr_at_10": 0.0,
+        "hit_rate_at_10": 0.0,
+        "recall_at_10": 0.0,
+        "precision_at_10": 0.0
+      }
+    },
+    {
+      "qid": 200015,
+      "query": "凡爱宝贝",
+      "expected_pids": [
+        14901
+      ],
+      "retrieved_pids": [
+        753390,
+        1894,
+        692061,
+        42,
+        850,
+        1601,
+        291,
+        2537,
+        847834
+      ],
+      "retrieval_time": 0.05006098747253418,
+      "metrics": {
+        "mrr_at_1": 0.0,
+        "hit_rate_at_1": 0.0,
+        "recall_at_1": 0.0,
+        "precision_at_1": 0.0,
+        "mrr_at_3": 0.0,
+        "hit_rate_at_3": 0.0,
+        "recall_at_3": 0.0,
+        "precision_at_3": 0.0,
+        "mrr_at_5": 0.0,
+        "hit_rate_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "precision_at_5": 0.0,
+        "mrr_at_10": 0.0,
+        "hit_rate_at_10": 0.0,
+        "recall_at_10": 0.0,
+        "precision_at_10": 0.0
+      }
+    },
+    {
+      "qid": 200016,
+      "query": "海尔洗碗机hwy14-186bku1",
+      "expected_pids": [
+        15129
+      ],
+      "retrieved_pids": [
+        1182,
+        122607,
+        270917,
+        902206,
+        363,
+        5,
+        180752,
+        1793
+      ],
+      "retrieval_time": 0.08004975318908691,
+      "metrics": {
+        "mrr_at_1": 0.0,
+        "hit_rate_at_1": 0.0,
+        "recall_at_1": 0.0,
+        "precision_at_1": 0.0,
+        "mrr_at_3": 0.0,
+        "hit_rate_at_3": 0.0,
+        "recall_at_3": 0.0,
+        "precision_at_3": 0.0,
+        "mrr_at_5": 0.0,
+        "hit_rate_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "precision_at_5": 0.0,
+        "mrr_at_10": 0.0,
+        "hit_rate_at_10": 0.0,
+        "recall_at_10": 0.0,
+        "precision_at_10": 0.0
+      }
+    },
+    {
+      "qid": 200017,
+      "query": "廉邦铁锅",
+      "expected_pids": [
+        16731
+      ],
+      "retrieved_pids": [
+        2476,
+        486645,
+        132,
+        127364,
+        342469,
+        1855,
+        505314
+      ],
+      "retrieval_time": 0.053833723068237305,
+      "metrics": {
+        "mrr_at_1": 0.0,
+        "hit_rate_at_1": 0.0,
+        "recall_at_1": 0.0,
+        "precision_at_1": 0.0,
+        "mrr_at_3": 0.0,
+        "hit_rate_at_3": 0.0,
+        "recall_at_3": 0.0,
+        "precision_at_3": 0.0,
+        "mrr_at_5": 0.0,
+        "hit_rate_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "precision_at_5": 0.0,
+        "mrr_at_10": 0.0,
+        "hit_rate_at_10": 0.0,
+        "recall_at_10": 0.0,
+        "precision_at_10": 0.0
+      }
+    },
+    {
+      "qid": 200018,
+      "query": "爱立舍机油滤芯",
+      "expected_pids": [
+        17311
+      ],
+      "retrieved_pids": [
+        2370,
+        411,
+        321,
+        731,
+        119649,
+        524057,
+        588
+      ],
+      "retrieval_time": 0.05472207069396973,
+      "metrics": {
+        "mrr_at_1": 0.0,
+        "hit_rate_at_1": 0.0,
+        "recall_at_1": 0.0,
+        "precision_at_1": 0.0,
+        "mrr_at_3": 0.0,
+        "hit_rate_at_3": 0.0,
+        "recall_at_3": 0.0,
+        "precision_at_3": 0.0,
+        "mrr_at_5": 0.0,
+        "hit_rate_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "precision_at_5": 0.0,
+        "mrr_at_10": 0.0,
+        "hit_rate_at_10": 0.0,
+        "recall_at_10": 0.0,
+        "precision_at_10": 0.0
+      }
+    },
+    {
+      "qid": 200019,
+      "query": "德绒内衣男",
+      "expected_pids": [
+        17811
+      ],
+      "retrieved_pids": [
+        2478,
+        2452,
+        217297,
+        2954,
+        2346,
+        469499,
+        418660
+      ],
+      "retrieval_time": 0.05410170555114746,
+      "metrics": {
+        "mrr_at_1": 0.0,
+        "hit_rate_at_1": 0.0,
+        "recall_at_1": 0.0,
+        "precision_at_1": 0.0,
+        "mrr_at_3": 0.0,
+        "hit_rate_at_3": 0.0,
+        "recall_at_3": 0.0,
+        "precision_at_3": 0.0,
+        "mrr_at_5": 0.0,
+        "hit_rate_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "precision_at_5": 0.0,
+        "mrr_at_10": 0.0,
+        "hit_rate_at_10": 0.0,
+        "recall_at_10": 0.0,
+        "precision_at_10": 0.0
+      }
+    },
+    {
+      "qid": 200020,
+      "query": "u2底板",
+      "expected_pids": [
+        17859
+      ],
+      "retrieved_pids": [
+        586,
+        948,
+        2245,
+        2264,
+        771327,
+        1657,
+        2809,
+        850765
+      ],
+      "retrieval_time": 0.050455331802368164,
+      "metrics": {
+        "mrr_at_1": 0.0,
+        "hit_rate_at_1": 0.0,
+        "recall_at_1": 0.0,
+        "precision_at_1": 0.0,
+        "mrr_at_3": 0.0,
+        "hit_rate_at_3": 0.0,
+        "recall_at_3": 0.0,
+        "precision_at_3": 0.0,
+        "mrr_at_5": 0.0,
+        "hit_rate_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "precision_at_5": 0.0,
+        "mrr_at_10": 0.0,
+        "hit_rate_at_10": 0.0,
+        "recall_at_10": 0.0,
+        "precision_at_10": 0.0
+      }
+    },
+    {
+      "qid": 200021,
+      "query": "五福家园山药粉",
+      "expected_pids": [
+        18697
+      ],
+      "retrieved_pids": [
+        1855,
+        131,
+        1843,
+        248,
+        39,
+        483,
+        499
+      ],
+      "retrieval_time": 0.05899667739868164,
+      "metrics": {
+        "mrr_at_1": 0.0,
+        "hit_rate_at_1": 0.0,
+        "recall_at_1": 0.0,
+        "precision_at_1": 0.0,
+        "mrr_at_3": 0.0,
+        "hit_rate_at_3": 0.0,
+        "recall_at_3": 0.0,
+        "precision_at_3": 0.0,
+        "mrr_at_5": 0.0,
+        "hit_rate_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "precision_at_5": 0.0,
+        "mrr_at_10": 0.0,
+        "hit_rate_at_10": 0.0,
+        "recall_at_10": 0.0,
+        "precision_at_10": 0.0
+      }
+    },
+    {
+      "qid": 200022,
+      "query": "杭州地区印刷品",
+      "expected_pids": [
+        19049
+      ],
+      "retrieved_pids": [
+        369893,
+        256,
+        1234,
+        263,
+        557,
+        2377,
+        1518,
+        967281,
+        1003
+      ],
+      "retrieval_time": 0.059243202209472656,
+      "metrics": {
+        "mrr_at_1": 0.0,
+        "hit_rate_at_1": 0.0,
+        "recall_at_1": 0.0,
+        "precision_at_1": 0.0,
+        "mrr_at_3": 0.0,
+        "hit_rate_at_3": 0.0,
+        "recall_at_3": 0.0,
+        "precision_at_3": 0.0,
+        "mrr_at_5": 0.0,
+        "hit_rate_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "precision_at_5": 0.0,
+        "mrr_at_10": 0.0,
+        "hit_rate_at_10": 0.0,
+        "recall_at_10": 0.0,
+        "precision_at_10": 0.0
+      }
+    },
+    {
+      "qid": 200023,
+      "query": "美式台钳",
+      "expected_pids": [
+        19440
+      ],
+      "retrieved_pids": [
+        2483,
+        35,
+        887,
+        705,
+        140589,
+        270123
+      ],
+      "retrieval_time": 0.04992485046386719,
+      "metrics": {
+        "mrr_at_1": 0.0,
+        "hit_rate_at_1": 0.0,
+        "recall_at_1": 0.0,
+        "precision_at_1": 0.0,
+        "mrr_at_3": 0.0,
+        "hit_rate_at_3": 0.0,
+        "recall_at_3": 0.0,
+        "precision_at_3": 0.0,
+        "mrr_at_5": 0.0,
+        "hit_rate_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "precision_at_5": 0.0,
+        "mrr_at_10": 0.0,
+        "hit_rate_at_10": 0.0,
+        "recall_at_10": 0.0,
+        "precision_at_10": 0.0
+      }
+    },
+    {
+      "qid": 200024,
+      "query": "冬天四件套礼物",
+      "expected_pids": [
+        21362
+      ],
+      "retrieved_pids": [
+        583,
+        928,
+        415225,
+        867,
+        1338,
+        2719,
+        2346,
+        397552,
+        94550
+      ],
+      "retrieval_time": 0.05695509910583496,
+      "metrics": {
+        "mrr_at_1": 0.0,
+        "hit_rate_at_1": 0.0,
+        "recall_at_1": 0.0,
+        "precision_at_1": 0.0,
+        "mrr_at_3": 0.0,
+        "hit_rate_at_3": 0.0,
+        "recall_at_3": 0.0,
+        "precision_at_3": 0.0,
+        "mrr_at_5": 0.0,
+        "hit_rate_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "precision_at_5": 0.0,
+        "mrr_at_10": 0.0,
+        "hit_rate_at_10": 0.0,
+        "recall_at_10": 0.0,
+        "precision_at_10": 0.0
+      }
+    },
+    {
+      "qid": 200025,
+      "query": "背景墙吊灯",
+      "expected_pids": [
+        21582
+      ],
+      "retrieved_pids": [
+        625,
+        1186,
+        1829,
+        1278,
+        2985,
+        1261,
+        711
+      ],
+      "retrieval_time": 0.05280947685241699,
+      "metrics": {
+        "mrr_at_1": 0.0,
+        "hit_rate_at_1": 0.0,
+        "recall_at_1": 0.0,
+        "precision_at_1": 0.0,
+        "mrr_at_3": 0.0,
+        "hit_rate_at_3": 0.0,
+        "recall_at_3": 0.0,
+        "precision_at_3": 0.0,
+        "mrr_at_5": 0.0,
+        "hit_rate_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "precision_at_5": 0.0,
+        "mrr_at_10": 0.0,
+        "hit_rate_at_10": 0.0,
+        "recall_at_10": 0.0,
+        "precision_at_10": 0.0
+      }
+    },
+    {
+      "qid": 200026,
+      "query": "碗柜收纳多功能放碗",
+      "expected_pids": [
+        22069
+      ],
+      "retrieved_pids": [
+        451952,
+        349,
+        2194,
+        564,
+        2424,
+        839
+      ],
+      "retrieval_time": 0.05590939521789551,
+      "metrics": {
+        "mrr_at_1": 0.0,
+        "hit_rate_at_1": 0.0,
+        "recall_at_1": 0.0,
+        "precision_at_1": 0.0,
+        "mrr_at_3": 0.0,
+        "hit_rate_at_3": 0.0,
+        "recall_at_3": 0.0,
+        "precision_at_3": 0.0,
+        "mrr_at_5": 0.0,
+        "hit_rate_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "precision_at_5": 0.0,
+        "mrr_at_10": 0.0,
+        "hit_rate_at_10": 0.0,
+        "recall_at_10": 0.0,
+        "precision_at_10": 0.0
+      }
+    },
+    {
+      "qid": 200027,
+      "query": "鳄龟爆刺凶猛",
+      "expected_pids": [
+        23225
+      ],
+      "retrieved_pids": [
+        1395,
+        2662,
+        1373,
+        707432,
+        1418,
+        2624,
+        528,
+        451
+      ],
+      "retrieval_time": 0.05884218215942383,
+      "metrics": {
+        "mrr_at_1": 0.0,
+        "hit_rate_at_1": 0.0,
+        "recall_at_1": 0.0,
+        "precision_at_1": 0.0,
+        "mrr_at_3": 0.0,
+        "hit_rate_at_3": 0.0,
+        "recall_at_3": 0.0,
+        "precision_at_3": 0.0,
+        "mrr_at_5": 0.0,
+        "hit_rate_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "precision_at_5": 0.0,
+        "mrr_at_10": 0.0,
+        "hit_rate_at_10": 0.0,
+        "recall_at_10": 0.0,
+        "precision_at_10": 0.0
+      }
+    },
+    {
+      "qid": 200028,
+      "query": "吉莫特洗鼻器",
+      "expected_pids": [
+        25061
+      ],
+      "retrieved_pids": [
+        840749,
+        1159,
+        356474,
+        2800,
+        1398,
+        2182,
+        1715
+      ],
+      "retrieval_time": 0.05442404747009277,
+      "metrics": {
+        "mrr_at_1": 0.0,
+        "hit_rate_at_1": 0.0,
+        "recall_at_1": 0.0,
+        "precision_at_1": 0.0,
+        "mrr_at_3": 0.0,
+        "hit_rate_at_3": 0.0,
+        "recall_at_3": 0.0,
+        "precision_at_3": 0.0,
+        "mrr_at_5": 0.0,
+        "hit_rate_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "precision_at_5": 0.0,
+        "mrr_at_10": 0.0,
+        "hit_rate_at_10": 0.0,
+        "recall_at_10": 0.0,
+        "precision_at_10": 0.0
+      }
+    },
+    {
+      "qid": 200029,
+      "query": "绿水鬼毛线",
+      "expected_pids": [
+        25595
+      ],
+      "retrieved_pids": [
+        615014,
+        217,
+        903,
+        1868,
+        263515,
+        2939,
+        2882
+      ],
+      "retrieval_time": 0.053267478942871094,
+      "metrics": {
+        "mrr_at_1": 0.0,
+        "hit_rate_at_1": 0.0,
+        "recall_at_1": 0.0,
+        "precision_at_1": 0.0,
+        "mrr_at_3": 0.0,
+        "hit_rate_at_3": 0.0,
+        "recall_at_3": 0.0,
+        "precision_at_3": 0.0,
+        "mrr_at_5": 0.0,
+        "hit_rate_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "precision_at_5": 0.0,
+        "mrr_at_10": 0.0,
+        "hit_rate_at_10": 0.0,
+        "recall_at_10": 0.0,
+        "precision_at_10": 0.0
+      }
+    },
+    {
+      "qid": 200030,
+      "query": "橙色玻璃胶",
+      "expected_pids": [
+        27101
+      ],
+      "retrieved_pids": [
+        1900,
+        125571,
+        660269,
+        555,
+        539303
+      ],
+      "retrieval_time": 0.055006980895996094,
+      "metrics": {
+        "mrr_at_1": 0.0,
+        "hit_rate_at_1": 0.0,
+        "recall_at_1": 0.0,
+        "precision_at_1": 0.0,
+        "mrr_at_3": 0.0,
+        "hit_rate_at_3": 0.0,
+        "recall_at_3": 0.0,
+        "precision_at_3": 0.0,
+        "mrr_at_5": 0.0,
+        "hit_rate_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "precision_at_5": 0.0,
+        "mrr_at_10": 0.0,
+        "hit_rate_at_10": 0.0,
+        "recall_at_10": 0.0,
+        "precision_at_10": 0.0
+      }
+    },
+    {
+      "qid": 200031,
+      "query": "火花塞 单铂金",
+      "expected_pids": [
+        29984
+      ],
+      "retrieved_pids": [
+        2789,
+        917,
+        1918,
+        829667,
+        411667,
+        140200,
+        2938,
+        895
+      ],
+      "retrieval_time": 0.05686616897583008,
+      "metrics": {
+        "mrr_at_1": 0.0,
+        "hit_rate_at_1": 0.0,
+        "recall_at_1": 0.0,
+        "precision_at_1": 0.0,
+        "mrr_at_3": 0.0,
+        "hit_rate_at_3": 0.0,
+        "recall_at_3": 0.0,
+        "precision_at_3": 0.0,
+        "mrr_at_5": 0.0,
+        "hit_rate_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "precision_at_5": 0.0,
+        "mrr_at_10": 0.0,
+        "hit_rate_at_10": 0.0,
+        "recall_at_10": 0.0,
+        "precision_at_10": 0.0
+      }
+    },
+    {
+      "qid": 200032,
+      "query": "银行合作牌匾",
+      "expected_pids": [
+        31462
+      ],
+      "retrieved_pids": [
+        1038,
+        31462,
+        3004,
+        2012,
+        1019,
+        360900,
+        458
+      ],
+      "retrieval_time": 0.05511355400085449,
+      "metrics": {
+        "mrr_at_1": 0.0,
+        "hit_rate_at_1": 0.0,
+        "recall_at_1": 0.0,
+        "precision_at_1": 0.0,
+        "mrr_at_3": 0.5,
+        "hit_rate_at_3": 1.0,
+        "recall_at_3": 1.0,
+        "precision_at_3": 0.3333333333333333,
+        "mrr_at_5": 0.5,
+        "hit_rate_at_5": 1.0,
+        "recall_at_5": 1.0,
+        "precision_at_5": 0.2,
+        "mrr_at_10": 0.5,
+        "hit_rate_at_10": 1.0,
+        "recall_at_10": 1.0,
+        "precision_at_10": 0.1
+      }
+    },
+    {
+      "qid": 200033,
+      "query": "可折叠旅行包",
+      "expected_pids": [
+        33471
+      ],
+      "retrieved_pids": [
+        1214,
+        757775,
+        863370,
+        830,
+        1940,
+        978557,
+        795254,
+        394
+      ],
+      "retrieval_time": 0.0605616569519043,
+      "metrics": {
+        "mrr_at_1": 0.0,
+        "hit_rate_at_1": 0.0,
+        "recall_at_1": 0.0,
+        "precision_at_1": 0.0,
+        "mrr_at_3": 0.0,
+        "hit_rate_at_3": 0.0,
+        "recall_at_3": 0.0,
+        "precision_at_3": 0.0,
+        "mrr_at_5": 0.0,
+        "hit_rate_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "precision_at_5": 0.0,
+        "mrr_at_10": 0.0,
+        "hit_rate_at_10": 0.0,
+        "recall_at_10": 0.0,
+        "precision_at_10": 0.0
+      }
+    },
+    {
+      "qid": 200034,
+      "query": "秋滋堂保健品专营店",
+      "expected_pids": [
+        33640
+      ],
+      "retrieved_pids": [
+        267,
+        2185,
+        2046,
+        2861,
+        7,
+        385904,
+        2717,
+        2438
+      ],
+      "retrieval_time": 0.07056570053100586,
+      "metrics": {
+        "mrr_at_1": 0.0,
+        "hit_rate_at_1": 0.0,
+        "recall_at_1": 0.0,
+        "precision_at_1": 0.0,
+        "mrr_at_3": 0.0,
+        "hit_rate_at_3": 0.0,
+        "recall_at_3": 0.0,
+        "precision_at_3": 0.0,
+        "mrr_at_5": 0.0,
+        "hit_rate_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "precision_at_5": 0.0,
+        "mrr_at_10": 0.0,
+        "hit_rate_at_10": 0.0,
+        "recall_at_10": 0.0,
+        "precision_at_10": 0.0
+      }
+    },
+    {
+      "qid": 200035,
+      "query": "zippo招财进宝24k金",
+      "expected_pids": [
+        38097
+      ],
+      "retrieved_pids": [
+        327423,
+        1189,
+        633485,
+        2409,
+        252429,
+        270917,
+        181256,
+        808
+      ],
+      "retrieval_time": 0.06156134605407715,
+      "metrics": {
+        "mrr_at_1": 0.0,
+        "hit_rate_at_1": 0.0,
+        "recall_at_1": 0.0,
+        "precision_at_1": 0.0,
+        "mrr_at_3": 0.0,
+        "hit_rate_at_3": 0.0,
+        "recall_at_3": 0.0,
+        "precision_at_3": 0.0,
+        "mrr_at_5": 0.0,
+        "hit_rate_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "precision_at_5": 0.0,
+        "mrr_at_10": 0.0,
+        "hit_rate_at_10": 0.0,
+        "recall_at_10": 0.0,
+        "precision_at_10": 0.0
+      }
+    },
+    {
+      "qid": 200036,
+      "query": "风热感冒颗粒西安",
+      "expected_pids": [
+        38136
+      ],
+      "retrieved_pids": [
+        2345,
+        239,
+        2383,
+        2364,
+        128715,
+        2871,
+        1949,
+        1111
+      ],
+      "retrieval_time": 0.06174039840698242,
+      "metrics": {
+        "mrr_at_1": 0.0,
+        "hit_rate_at_1": 0.0,
+        "recall_at_1": 0.0,
+        "precision_at_1": 0.0,
+        "mrr_at_3": 0.0,
+        "hit_rate_at_3": 0.0,
+        "recall_at_3": 0.0,
+        "precision_at_3": 0.0,
+        "mrr_at_5": 0.0,
+        "hit_rate_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "precision_at_5": 0.0,
+        "mrr_at_10": 0.0,
+        "hit_rate_at_10": 0.0,
+        "recall_at_10": 0.0,
+        "precision_at_10": 0.0
+      }
+    },
+    {
+      "qid": 200037,
+      "query": "飞利浦80w木雅吸顶灯",
+      "expected_pids": [
+        39954
+      ],
+      "retrieved_pids": [
+        1703,
+        419,
+        1380,
+        652,
+        625,
+        398645,
+        54
+      ],
+      "retrieval_time": 0.06315469741821289,
+      "metrics": {
+        "mrr_at_1": 0.0,
+        "hit_rate_at_1": 0.0,
+        "recall_at_1": 0.0,
+        "precision_at_1": 0.0,
+        "mrr_at_3": 0.0,
+        "hit_rate_at_3": 0.0,
+        "recall_at_3": 0.0,
+        "precision_at_3": 0.0,
+        "mrr_at_5": 0.0,
+        "hit_rate_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "precision_at_5": 0.0,
+        "mrr_at_10": 0.0,
+        "hit_rate_at_10": 0.0,
+        "recall_at_10": 0.0,
+        "precision_at_10": 0.0
+      }
+    },
+    {
+      "qid": 200038,
+      "query": "小飞燕辅助器",
+      "expected_pids": [
+        41700
+      ],
+      "retrieved_pids": [
+        86,
+        1436,
+        277,
+        1142,
+        339
+      ],
+      "retrieval_time": 0.0556788444519043,
+      "metrics": {
+        "mrr_at_1": 0.0,
+        "hit_rate_at_1": 0.0,
+        "recall_at_1": 0.0,
+        "precision_at_1": 0.0,
+        "mrr_at_3": 0.0,
+        "hit_rate_at_3": 0.0,
+        "recall_at_3": 0.0,
+        "precision_at_3": 0.0,
+        "mrr_at_5": 0.0,
+        "hit_rate_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "precision_at_5": 0.0,
+        "mrr_at_10": 0.0,
+        "hit_rate_at_10": 0.0,
+        "recall_at_10": 0.0,
+        "precision_at_10": 0.0
+      }
+    },
+    {
+      "qid": 200039,
+      "query": "轻奢莫品",
+      "expected_pids": [
+        42731
+      ],
+      "retrieved_pids": [
+        2665,
+        2435,
+        525598,
+        829,
+        2172,
+        1676,
+        1092,
+        1030
+      ],
+      "retrieval_time": 0.05156970024108887,
+      "metrics": {
+        "mrr_at_1": 0.0,
+        "hit_rate_at_1": 0.0,
+        "recall_at_1": 0.0,
+        "precision_at_1": 0.0,
+        "mrr_at_3": 0.0,
+        "hit_rate_at_3": 0.0,
+        "recall_at_3": 0.0,
+        "precision_at_3": 0.0,
+        "mrr_at_5": 0.0,
+        "hit_rate_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "precision_at_5": 0.0,
+        "mrr_at_10": 0.0,
+        "hit_rate_at_10": 0.0,
+        "recall_at_10": 0.0,
+        "precision_at_10": 0.0
+      }
+    },
+    {
+      "qid": 200040,
+      "query": "懒猫总司",
+      "expected_pids": [
+        42862
+      ],
+      "retrieved_pids": [
+        744,
+        287,
+        1312,
+        71,
+        295,
+        2101,
+        616,
+        707432
+      ],
+      "retrieval_time": 0.05334281921386719,
+      "metrics": {
+        "mrr_at_1": 0.0,
+        "hit_rate_at_1": 0.0,
+        "recall_at_1": 0.0,
+        "precision_at_1": 0.0,
+        "mrr_at_3": 0.0,
+        "hit_rate_at_3": 0.0,
+        "recall_at_3": 0.0,
+        "precision_at_3": 0.0,
+        "mrr_at_5": 0.0,
+        "hit_rate_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "precision_at_5": 0.0,
+        "mrr_at_10": 0.0,
+        "hit_rate_at_10": 0.0,
+        "recall_at_10": 0.0,
+        "precision_at_10": 0.0
+      }
+    },
+    {
+      "qid": 200041,
+      "query": "刹车油电动车",
+      "expected_pids": [
+        44803
+      ],
+      "retrieved_pids": [
+        2443,
+        2940,
+        2481,
+        1646,
+        801490,
+        2471,
+        1878,
+        213,
+        220753
+      ],
+      "retrieval_time": 0.06316041946411133,
+      "metrics": {
+        "mrr_at_1": 0.0,
+        "hit_rate_at_1": 0.0,
+        "recall_at_1": 0.0,
+        "precision_at_1": 0.0,
+        "mrr_at_3": 0.0,
+        "hit_rate_at_3": 0.0,
+        "recall_at_3": 0.0,
+        "precision_at_3": 0.0,
+        "mrr_at_5": 0.0,
+        "hit_rate_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "precision_at_5": 0.0,
+        "mrr_at_10": 0.0,
+        "hit_rate_at_10": 0.0,
+        "recall_at_10": 0.0,
+        "precision_at_10": 0.0
+      }
+    },
+    {
+      "qid": 200042,
+      "query": "书法教室墙贴写真",
+      "expected_pids": [
+        45782
+      ],
+      "retrieved_pids": [
+        980,
+        2638,
+        632,
+        2273,
+        2033,
+        2470
+      ],
+      "retrieval_time": 0.12217211723327637,
+      "metrics": {
+        "mrr_at_1": 0.0,
+        "hit_rate_at_1": 0.0,
+        "recall_at_1": 0.0,
+        "precision_at_1": 0.0,
+        "mrr_at_3": 0.0,
+        "hit_rate_at_3": 0.0,
+        "recall_at_3": 0.0,
+        "precision_at_3": 0.0,
+        "mrr_at_5": 0.0,
+        "hit_rate_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "precision_at_5": 0.0,
+        "mrr_at_10": 0.0,
+        "hit_rate_at_10": 0.0,
+        "recall_at_10": 0.0,
+        "precision_at_10": 0.0
+      }
+    },
+    {
+      "qid": 200043,
+      "query": "美国第二代碎水杯",
+      "expected_pids": [
+        46030
+      ],
+      "retrieved_pids": [
+        464790,
+        1177,
+        478388,
+        552542,
+        1854,
+        137,
+        525598,
+        673,
+        824
+      ],
+      "retrieval_time": 0.08507657051086426,
+      "metrics": {
+        "mrr_at_1": 0.0,
+        "hit_rate_at_1": 0.0,
+        "recall_at_1": 0.0,
+        "precision_at_1": 0.0,
+        "mrr_at_3": 0.0,
+        "hit_rate_at_3": 0.0,
+        "recall_at_3": 0.0,
+        "precision_at_3": 0.0,
+        "mrr_at_5": 0.0,
+        "hit_rate_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "precision_at_5": 0.0,
+        "mrr_at_10": 0.0,
+        "hit_rate_at_10": 0.0,
+        "recall_at_10": 0.0,
+        "precision_at_10": 0.0
+      }
+    },
+    {
+      "qid": 200044,
+      "query": "影巨人a60",
+      "expected_pids": [
+        47254
+      ],
+      "retrieved_pids": [
+        889,
+        1867,
+        530014,
+        595621,
+        2722,
+        1937,
+        742310,
+        460,
+        401524
+      ],
+      "retrieval_time": 0.06887149810791016,
+      "metrics": {
+        "mrr_at_1": 0.0,
+        "hit_rate_at_1": 0.0,
+        "recall_at_1": 0.0,
+        "precision_at_1": 0.0,
+        "mrr_at_3": 0.0,
+        "hit_rate_at_3": 0.0,
+        "recall_at_3": 0.0,
+        "precision_at_3": 0.0,
+        "mrr_at_5": 0.0,
+        "hit_rate_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "precision_at_5": 0.0,
+        "mrr_at_10": 0.0,
+        "hit_rate_at_10": 0.0,
+        "recall_at_10": 0.0,
+        "precision_at_10": 0.0
+      }
+    },
+    {
+      "qid": 200045,
+      "query": "暖气进水管滤网",
+      "expected_pids": [
+        47410
+      ],
+      "retrieved_pids": [
+        1037,
+        138,
+        2730,
+        2865,
+        1220
+      ],
+      "retrieval_time": 0.058615922927856445,
+      "metrics": {
+        "mrr_at_1": 0.0,
+        "hit_rate_at_1": 0.0,
+        "recall_at_1": 0.0,
+        "precision_at_1": 0.0,
+        "mrr_at_3": 0.0,
+        "hit_rate_at_3": 0.0,
+        "recall_at_3": 0.0,
+        "precision_at_3": 0.0,
+        "mrr_at_5": 0.0,
+        "hit_rate_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "precision_at_5": 0.0,
+        "mrr_at_10": 0.0,
+        "hit_rate_at_10": 0.0,
+        "recall_at_10": 0.0,
+        "precision_at_10": 0.0
+      }
+    },
+    {
+      "qid": 200046,
+      "query": "恩姆花园爽身液",
+      "expected_pids": [
+        47783
+      ],
+      "retrieved_pids": [
+        1077,
+        710546,
+        2450,
+        708751,
+        1576,
+        852252,
+        720,
+        788914,
+        2418
+      ],
+      "retrieval_time": 0.05477643013000488,
+      "metrics": {
+        "mrr_at_1": 0.0,
+        "hit_rate_at_1": 0.0,
+        "recall_at_1": 0.0,
+        "precision_at_1": 0.0,
+        "mrr_at_3": 0.0,
+        "hit_rate_at_3": 0.0,
+        "recall_at_3": 0.0,
+        "precision_at_3": 0.0,
+        "mrr_at_5": 0.0,
+        "hit_rate_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "precision_at_5": 0.0,
+        "mrr_at_10": 0.0,
+        "hit_rate_at_10": 0.0,
+        "recall_at_10": 0.0,
+        "precision_at_10": 0.0
+      }
+    },
+    {
+      "qid": 200047,
+      "query": "鱼珠牌万能胶快干型",
+      "expected_pids": [
+        49553
+      ],
+      "retrieved_pids": [
+        539303,
+        510710,
+        1601,
+        324254,
+        1186,
+        244,
+        1150,
+        1066
+      ],
+      "retrieval_time": 0.06806278228759766,
+      "metrics": {
+        "mrr_at_1": 0.0,
+        "hit_rate_at_1": 0.0,
+        "recall_at_1": 0.0,
+        "precision_at_1": 0.0,
+        "mrr_at_3": 0.0,
+        "hit_rate_at_3": 0.0,
+        "recall_at_3": 0.0,
+        "precision_at_3": 0.0,
+        "mrr_at_5": 0.0,
+        "hit_rate_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "precision_at_5": 0.0,
+        "mrr_at_10": 0.0,
+        "hit_rate_at_10": 0.0,
+        "recall_at_10": 0.0,
+        "precision_at_10": 0.0
+      }
+    },
+    {
+      "qid": 200048,
+      "query": "化氏极细袖",
+      "expected_pids": [
+        49762
+      ],
+      "retrieved_pids": [
+        1673,
+        948,
+        698,
+        2994,
+        1889,
+        2096
+      ],
+      "retrieval_time": 0.06609797477722168,
+      "metrics": {
+        "mrr_at_1": 0.0,
+        "hit_rate_at_1": 0.0,
+        "recall_at_1": 0.0,
+        "precision_at_1": 0.0,
+        "mrr_at_3": 0.0,
+        "hit_rate_at_3": 0.0,
+        "recall_at_3": 0.0,
+        "precision_at_3": 0.0,
+        "mrr_at_5": 0.0,
+        "hit_rate_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "precision_at_5": 0.0,
+        "mrr_at_10": 0.0,
+        "hit_rate_at_10": 0.0,
+        "recall_at_10": 0.0,
+        "precision_at_10": 0.0
+      }
+    },
+    {
+      "qid": 200049,
+      "query": "鸡胸碎肉",
+      "expected_pids": [
+        50700
+      ],
+      "retrieved_pids": [
+        1694,
+        2696,
+        2127,
+        66870,
+        2428,
+        854
+      ],
+      "retrieval_time": 0.056917667388916016,
+      "metrics": {
+        "mrr_at_1": 0.0,
+        "hit_rate_at_1": 0.0,
+        "recall_at_1": 0.0,
+        "precision_at_1": 0.0,
+        "mrr_at_3": 0.0,
+        "hit_rate_at_3": 0.0,
+        "recall_at_3": 0.0,
+        "precision_at_3": 0.0,
+        "mrr_at_5": 0.0,
+        "hit_rate_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "precision_at_5": 0.0,
+        "mrr_at_10": 0.0,
+        "hit_rate_at_10": 0.0,
+        "recall_at_10": 0.0,
+        "precision_at_10": 0.0
+      }
+    }
+  ]
+}
