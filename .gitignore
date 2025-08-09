@@ -1,6 +1,6 @@
 # 忽略model_cache文件夹及其所有内容
 model_cache/
-Multi-CPR
+Multi-CPR/
 /models--*/
 models--BAAI--bge-large-zh-v1.5/
 models--BAAI--bge-small-zh-v1.5/
