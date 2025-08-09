@@ -16,7 +16,7 @@ from advanced_zipper_engine_v3 import AdvancedZipperQueryEngineV3, ZipperV3Confi
 
 # --- 配置参数 ---
 MAX_DOCS = 5000   # 限制总文档数，加快测试
-DOMAIN = 'ecom'   # 测试域: 'ecom', 'medical', 'video'
+DOMAIN = 'video'   # 测试域: 'ecom', 'medical', 'video'
 MAX_QUERIES = 100 # 可以适当增加测试查询数，以获得更稳定的结果
 K_VALUES = [1, 3, 5, 10]  # 评估的K值
 
@@ -50,26 +50,68 @@ def load_multicpr_data(data_dir: str, domain: str = 'ecom', max_docs: int = None
     qrels_pids = set(df_qrels_full[df_qrels_full['relevance'] == 1]['pid'].unique())
     logger.info(f"需要优先加载的相关PID数量: {len(qrels_pids)}")
     
-    # 使用pandas高效加载语料库
-    df_corpus = pd.read_csv(corpus_file, sep='\t', header=None, names=['pid', 'content'], dtype={'pid': int, 'content': str}, engine='python')
-    df_required = df_corpus[df_corpus['pid'].isin(qrels_pids)]
-    df_other = df_corpus[~df_corpus['pid'].isin(qrels_pids)]
-    
-    if max_docs and len(df_required) < max_docs:
-        df_final = pd.concat([df_required, df_other.head(max_docs - len(df_required))], ignore_index=True)
+    # 使用更稳健的逐行解析方式读取 TSV（仅按第一个制表符分割，容忍内容中的引号/制表符）
+    malformed_corpus_lines = 0
+    total_corpus_lines = 0
+    required_rows: List[Tuple[int, str]] = []
+    other_rows: List[Tuple[int, str]] = []
+
+    def parse_two_column_tsv(filepath: str):
+        with open(filepath, 'r', encoding='utf-8', errors='ignore') as f:
+            for line in f:
+                yield line.rstrip('\n')
+
+    for line in parse_two_column_tsv(corpus_file):
+        total_corpus_lines += 1
+        if not line:
+            continue
+        if '\t' not in line:
+            malformed_corpus_lines += 1
+            continue
+        pid_str, content = line.split('\t', 1)
+        try:
+            pid = int(pid_str)
+        except ValueError:
+            malformed_corpus_lines += 1
+            continue
+        if pid in qrels_pids:
+            required_rows.append((pid, content))
+        else:
+            other_rows.append((pid, content))
+
+    if max_docs and len(required_rows) < max_docs:
+        needed = max_docs - len(required_rows)
+        df_final_rows = required_rows + other_rows[:max(0, needed)]
     elif max_docs:
-        df_final = df_required.head(max_docs)
+        df_final_rows = required_rows[:max_docs]
     else:
-        df_final = df_corpus
-        
-    corpus = dict(zip(df_final['pid'], df_final['content']))
-    queries = dict(pd.read_csv(dev_query_file, sep='\t', header=None, names=['qid', 'query'], dtype={'qid': int, 'query': str}).values)
+        df_final_rows = required_rows + other_rows
+
+    corpus = {pid: content for pid, content in df_final_rows}
+
+    # 读取查询，同样采用稳健解析
+    malformed_query_lines = 0
+    total_query_lines = 0
+    queries: Dict[int, str] = {}
+    for line in parse_two_column_tsv(dev_query_file):
+        total_query_lines += 1
+        if not line or '\t' not in line:
+            malformed_query_lines += 1
+            continue
+        qid_str, query_text = line.split('\t', 1)
+        try:
+            qid = int(qid_str)
+        except ValueError:
+            malformed_query_lines += 1
+            continue
+        queries[qid] = query_text
     
+    # 构建 qrels 字典
     qrels = defaultdict(list)
     for _, row in df_qrels_full[df_qrels_full['relevance'] == 1].iterrows():
         qrels[row['qid']].append(row['pid'])
     
-    logger.info(f"数据加载完成，语料库: {len(corpus)}，查询: {len(queries)}，标注: {len(qrels)}")
+    logger.info(f"数据加载完成，语料库: {len(corpus)}（原始行数: {total_corpus_lines}，异常行: {malformed_corpus_lines}），查询: {len(queries)}（原始行数: {total_query_lines}，异常行: {malformed_query_lines}），标注: {len(qrels)}")
     return {'corpus': corpus, 'queries': queries, 'qrels': dict(qrels), 'domain': domain}
 
 # --- 评估指标计算 ---
