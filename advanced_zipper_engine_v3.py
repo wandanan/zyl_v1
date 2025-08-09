@@ -7,6 +7,7 @@ from typing import List, Tuple, Dict, Optional
 import time
 import logging
 from dataclasses import dataclass
+from contextlib import nullcontext
 
 # 依赖项检查
 try:
@@ -50,6 +51,12 @@ class ZipperV3Config:
     context_memory_decay: float = 0.8
     context_influence: float = 0.3
 
+    # 编码性能与兼容性
+    encode_batch_size: int = 64
+    max_length: int = 256
+    precompute_doc_tokens: bool = False
+    enable_amp_if_beneficial: bool = True
+
 
 @dataclass
 class ZipperV3State:
@@ -57,13 +64,28 @@ class ZipperV3State:
     context_vector: torch.Tensor
     
 class TokenLevelEncoder:
-    def __init__(self, model_path: str, use_fp16: bool = True):
+    def __init__(self, model_path: str, use_fp16: bool = True, enable_amp_if_beneficial: bool = True):
         logger.info(f"正在加载BGE模型用于Token级编码: {model_path}")
         self.model = FlagModel(model_path, 
                                query_instruction_for_retrieval="为这个句子生成表示以用于检索相关文章：",
                                use_fp16=use_fp16 if device.type == 'cuda' else False)
+        # 确保底层HF模型与全局device一致
+        self.model.model.to(device).eval()
         self.tokenizer = self.model.tokenizer
+        # AMP 策略：GTX 系列默认关闭，其它卡按需开启
+        self.enable_amp_if_beneficial = enable_amp_if_beneficial
+        self.gpu_name = (torch.cuda.get_device_name(0).upper() if torch.cuda.is_available() else "CPU")
+        self.use_amp = (torch.cuda.is_available() and "GTX" not in self.gpu_name and self.enable_amp_if_beneficial)
+        self.autocast_dtype = (torch.bfloat16 if torch.cuda.is_available() and torch.cuda.is_bf16_supported() else torch.float16)
         logger.info("Token级编码器加载成功。")
+        # --- 新增：显卡/AMP 自适应信息日志 ---
+        try:
+            logger.info(
+                f"设备: {device.type.upper()}, GPU: {self.gpu_name}, AMP启用: {self.use_amp}, autocast_dtype: "
+                f"{('bf16' if self.autocast_dtype==torch.bfloat16 else 'fp16')}"
+            )
+        except Exception:
+            pass
 
     def tokenize(self, text: str) -> List[str]:
         return self.tokenizer.tokenize(text)
@@ -77,7 +99,7 @@ class TokenLevelEncoder:
         doc_embeddings = self.model.encode(documents, batch_size=64)
         return torch.tensor(doc_embeddings, device=device)
 
-    def encode_tokens(self, text: str) -> torch.Tensor:
+    def encode_tokens(self, text: str, max_length: int = 512) -> torch.Tensor:
         # 使用encode_corpus获取每个token的向量
         # 注意：这需要FlagEmbedding的一个较新版本
         try:
@@ -88,7 +110,7 @@ class TokenLevelEncoder:
             # 回退到手动方法（效率较低）
             tokens = self.tokenize(text)
             if not tokens: return torch.empty(0, self.model.model.config.hidden_size, device=device)
-            inputs = self.tokenizer(text, return_tensors='pt', max_length=512, truncation=True).to(device)
+            inputs = self.tokenizer(text, return_tensors='pt', max_length=max_length, truncation=True).to(device)
             with torch.no_grad():
                 outputs = self.model.model(**inputs, output_hidden_states=True)
                 token_embeddings = outputs.hidden_states[-1].squeeze(0)
@@ -97,11 +119,52 @@ class TokenLevelEncoder:
                 return token_embeddings[1:-1]
             return token_embeddings
 
+    def _forward_hidden(self, inputs):
+        with torch.inference_mode():
+            use_amp = self.use_amp
+            ctx = torch.amp.autocast(device_type='cuda', dtype=self.autocast_dtype, enabled=use_amp) if use_amp else nullcontext()
+            with ctx:
+                outputs = self.model.model(**inputs)
+                return outputs.last_hidden_state
+
+    def encode_tokens_batch(self, texts: List[str], max_length: int = 384) -> List[torch.Tensor]:
+        if not texts:
+            return []
+        out: List[torch.Tensor] = []
+        model_device = next(self.model.model.parameters()).device
+        left, right = 0, len(texts)
+        bs = len(texts)
+        step = bs
+        while left < right:
+            step = min(step, right - left)
+            chunk = texts[left:left+step]
+            try:
+                inputs = self.tokenizer(chunk, padding=True, truncation=True, max_length=max_length, return_tensors='pt').to(model_device)
+                last_hidden = self._forward_hidden(inputs)
+                attn = inputs['attention_mask']
+                for i in range(last_hidden.size(0)):
+                    valid = attn[i].bool()
+                    vecs = last_hidden[i][valid]
+                    if vecs.size(0) > 2:
+                        vecs = vecs[1:-1]
+                    out.append(vecs.contiguous())
+                left += step
+                step = bs
+            except RuntimeError as e:
+                if "out of memory" in str(e).lower() and step > 1 and torch.cuda.is_available():
+                    torch.cuda.empty_cache()
+                    step = max(1, step // 2)
+                    # 退避：关闭 AMP
+                    self.use_amp = False
+                    continue
+                raise
+        return out
+
 # --- V3 主引擎 ---
 class AdvancedZipperQueryEngineV3:
     def __init__(self, config: ZipperV3Config):
         self.config = config
-        self.encoder = TokenLevelEncoder(config.bge_model_path)
+        self.encoder = TokenLevelEncoder(config.bge_model_path, enable_amp_if_beneficial=config.enable_amp_if_beneficial)
         
         if config.use_multi_head and config.embedding_dim % config.num_heads != 0:
             raise ValueError("embedding_dim 必须能被 num_heads 整除")
@@ -127,9 +190,20 @@ class AdvancedZipperQueryEngineV3:
         self.bm25_idx_to_pid = {i: pid for i, pid in enumerate(doc_ids_sorted)}
         
         logger.info("构建Token级稠密索引...")
-        for i, pid in enumerate(doc_ids_sorted):
-            self.doc_token_embeddings[pid] = self.encoder.encode_tokens(self.documents[pid])
-            if (i + 1) % 100 == 0: logger.info(f"  已处理 {i+1}/{len(doc_ids_sorted)} 个文档的Token向量化")
+        self.doc_token_embeddings = {}
+        if self.config.precompute_doc_tokens:
+            bs = self.config.encode_batch_size
+            max_len = self.config.max_length
+            for i in range(0, len(corpus_list), bs):
+                batch_texts = corpus_list[i:i+bs]
+                batch_pids = doc_ids_sorted[i:i+bs]
+                batch_vecs = self.encoder.encode_tokens_batch(batch_texts, max_length=max_len)
+                for pid, vecs in zip(batch_pids, batch_vecs):
+                    self.doc_token_embeddings[pid] = vecs
+                if (i + bs) % 100 == 0 or i + bs >= len(corpus_list):
+                    logger.info(f"  已处理 {min(i+bs, len(corpus_list))}/{len(corpus_list)} 个文档的Token向量化")
+        else:
+            logger.info("跳过全量token向量化，将在检索时按需编码候选文档。")
 
         logger.info(f"V3索引构建完成，总耗时: {time.time() - start_time:.3f}秒")
 
@@ -190,8 +264,21 @@ class AdvancedZipperQueryEngineV3:
         candidate_pids = [self.bm25_idx_to_pid[idx] for idx in bm25_candidate_indices]
         bm25_scores_map = {pid: bm25_raw_scores[idx] for idx, pid in zip(bm25_candidate_indices, candidate_pids)}
 
+        # 1.5 按需补齐候选文档的 Token 向量
+        missing_pids = [pid for pid in candidate_pids if pid not in self.doc_token_embeddings]
+        if missing_pids:
+            texts = [self.documents[pid] for pid in missing_pids]
+            bs = self.config.encode_batch_size
+            max_len = self.config.max_length
+            for i in range(0, len(texts), bs):
+                batch_texts = texts[i:i+bs]
+                batch_pids = missing_pids[i:i+bs]
+                batch_vecs = self.encoder.encode_tokens_batch(batch_texts, max_length=max_len)
+                for pid, vecs in zip(batch_pids, batch_vecs):
+                    self.doc_token_embeddings[pid] = vecs
+
         # 2. 准备查询向量 (可能被状态化调整)
-        query_tokens_emb = self.encoder.encode_tokens(query)
+        query_tokens_emb = self.encoder.encode_tokens(query, max_length=self.config.max_length)
         if state and self.config.use_stateful_reranking and state.context_vector.sum() != 0:
             logger.info("应用状态化上下文调整查询...")
             influence = self.config.context_influence

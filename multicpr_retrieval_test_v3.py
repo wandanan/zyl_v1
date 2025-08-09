@@ -20,6 +20,7 @@ DOMAIN = 'ecom'   # 测试域: 'ecom', 'medical', 'video'
 MAX_QUERIES = 100 # 可以适当增加测试查询数，以获得更稳定的结果
 K_VALUES = [1, 3, 5, 10]  # 评估的K值
 
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 # --- 日志配置 ---
 logging.basicConfig(
     level=logging.INFO,
@@ -165,7 +166,7 @@ def main():
     # --- 在这里配置你的实验策略 ---
     # 这是一套推荐的、在之前测试中表现出色的“全功能”配置
     config = ZipperV3Config(
-        bge_model_path="BAAI/bge-large-zh-v1.5", # 确保使用强大的large模型
+        bge_model_path="models--BAAI--bge-large-zh-v1.5/snapshots/79e7739b6ab944e86d6171e44d24c997fc1e0116", # 确保使用强大的large模型
         embedding_dim=1024,
         use_hybrid_search=True,
         bm25_weight=1.0,
@@ -173,7 +174,10 @@ def main():
         use_multi_head=True,
         use_length_penalty=True,
         use_stateful_reranking=True, # 尽管在单轮评估中作用有限，但我们保持架构完整性
-        context_influence=0.3
+        context_influence=0.3,
+        # --- 全量预编码与AMP自适应 ---
+        precompute_doc_tokens=False,           # False=按需编码, True=全量预编码
+        enable_amp_if_beneficial=True          # 自动根据显卡选择是否启用 AMP 及其精度
     )
     
     engine = AdvancedZipperQueryEngineV3(config)
